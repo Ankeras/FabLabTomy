@@ -1,8 +1,7 @@
 ﻿Public Class Fablab
-    Public Sub ElegirLayaout()
+    Public Shared Sub ElegirLayaout(sender As Object)
 
-        Dim formPrincipal As New Pricipal
-        formPrincipal.LayoutMdi(MdiLayout.TileHorizontal)
+
     End Sub
 
 End Class
