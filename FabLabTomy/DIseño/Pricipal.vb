@@ -14,14 +14,7 @@
 
     Private Sub LayoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerticalToolStripMenuItem.Click, HorizontalToolStripMenuItem.Click, CascadaToolStripMenuItem.Click
 
-        'Select Case 
-        '    Case VerticalToolStripMenuItem
-        '        Me.LayoutMdi(MdiLayout.TileVertical)
-        '    Case HorizontalToolStripMenuItem
-        '        Me.LayoutMdi(MdiLayout.TileHorizontal)
-        '    Case CascadaToolStripMenuItem
-        '        Me.LayoutMdi(MdiLayout.Cascade)
-        'End Select
+
 
 
     End Sub
