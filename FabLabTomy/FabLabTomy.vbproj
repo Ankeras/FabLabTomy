@@ -47,6 +47,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Memes\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -72,11 +75,35 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Codigo\Fablab.vb" />
+    <Compile Include="DIseño\EULA.Designer.vb">
+      <DependentUpon>EULA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\EULA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIseño\GestionUsuarios.Designer.vb">
+      <DependentUpon>GestionUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\GestionUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIseño\NuevoUsuario.Designer.vb">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\NuevoUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DIseño\Pricipal.Designer.vb">
       <DependentUpon>Pricipal.vb</DependentUpon>
     </Compile>
     <Compile Include="DIseño\Pricipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIseño\SplashV2.Designer.vb">
+      <DependentUpon>SplashV2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\SplashV2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -94,25 +121,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SplashScreen1.Designer.vb">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SplashScreen1.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DIseño\EULA.resx">
+      <DependentUpon>EULA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DIseño\Pricipal.resx">
       <DependentUpon>Pricipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\SplashV2.resx">
+      <DependentUpon>SplashV2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen1.resx">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
