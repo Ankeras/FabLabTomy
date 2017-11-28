@@ -82,10 +82,22 @@
     <Compile Include="DIseño\EULA.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DIseño\GestionMaquinas.Designer.vb">
+      <DependentUpon>GestionMaquinas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\GestionMaquinas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DIseño\GestionUsuarios.Designer.vb">
       <DependentUpon>GestionUsuarios.vb</DependentUpon>
     </Compile>
     <Compile Include="DIseño\GestionUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIseño\NuevaMaquina.Designer.vb">
+      <DependentUpon>NuevaMaquina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\NuevaMaquina.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DIseño\NuevoUsuario.Designer.vb">
