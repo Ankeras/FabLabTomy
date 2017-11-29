@@ -59,3 +59,7 @@ C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab
 C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.SplashV2.resources
 C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.Resources.resources
 C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.vbproj.GenerateResource.Cache
+C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\bin\Debug\FabLabTomy.exe.config
+C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.exe
+C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.xml
+C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.pdb
