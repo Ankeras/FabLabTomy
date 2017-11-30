@@ -79,7 +79,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Codigo\Fablab.vb" />
     <Compile Include="DIseño\EULA.Designer.vb">
       <DependentUpon>EULA.vb</DependentUpon>
     </Compile>
@@ -172,6 +171,10 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Codigo\" />
+    <Folder Include="Datos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -32,14 +32,18 @@ Partial Class Pricipal
         Me.AsdadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentanaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrganizarVentanasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VerticalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CascadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MinimizarTodasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VerticalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CascadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.UsuariosToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.MaquinasToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -109,6 +113,24 @@ Partial Class Pricipal
         Me.OrganizarVentanasToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
         Me.OrganizarVentanasToolStripMenuItem.Text = "Organizar Ventanas"
         '
+        'VerticalToolStripMenuItem
+        '
+        Me.VerticalToolStripMenuItem.Name = "VerticalToolStripMenuItem"
+        Me.VerticalToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.VerticalToolStripMenuItem.Text = "Vertical"
+        '
+        'HorizontalToolStripMenuItem
+        '
+        Me.HorizontalToolStripMenuItem.Name = "HorizontalToolStripMenuItem"
+        Me.HorizontalToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.HorizontalToolStripMenuItem.Text = "Horizontal"
+        '
+        'CascadaToolStripMenuItem
+        '
+        Me.CascadaToolStripMenuItem.Name = "CascadaToolStripMenuItem"
+        Me.CascadaToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.CascadaToolStripMenuItem.Text = "Cascada"
+        '
         'MinimizarTodasToolStripMenuItem
         '
         Me.MinimizarTodasToolStripMenuItem.Name = "MinimizarTodasToolStripMenuItem"
@@ -133,29 +155,33 @@ Partial Class Pricipal
         Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
         '
-        'VerticalToolStripMenuItem
+        'StatusStrip1
         '
-        Me.VerticalToolStripMenuItem.Name = "VerticalToolStripMenuItem"
-        Me.VerticalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.VerticalToolStripMenuItem.Text = "Vertical"
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripStatusLabel, Me.MaquinasToolStripStatusLabel})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 396)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(900, 22)
+        Me.StatusStrip1.TabIndex = 2
+        Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'HorizontalToolStripMenuItem
+        'UsuariosToolStripStatusLabel
         '
-        Me.HorizontalToolStripMenuItem.Name = "HorizontalToolStripMenuItem"
-        Me.HorizontalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.HorizontalToolStripMenuItem.Text = "Horizontal"
+        Me.UsuariosToolStripStatusLabel.Name = "UsuariosToolStripStatusLabel"
+        Me.UsuariosToolStripStatusLabel.Size = New System.Drawing.Size(52, 17)
+        Me.UsuariosToolStripStatusLabel.Text = "Usuarios"
         '
-        'CascadaToolStripMenuItem
+        'MaquinasToolStripStatusLabel
         '
-        Me.CascadaToolStripMenuItem.Name = "CascadaToolStripMenuItem"
-        Me.CascadaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CascadaToolStripMenuItem.Text = "Cascada"
+        Me.MaquinasToolStripStatusLabel.Name = "MaquinasToolStripStatusLabel"
+        Me.MaquinasToolStripStatusLabel.Size = New System.Drawing.Size(59, 17)
+        Me.MaquinasToolStripStatusLabel.Text = "Maquinas"
         '
         'Pricipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(900, 418)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
@@ -163,6 +189,8 @@ Partial Class Pricipal
         Me.Text = "Pricipal"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -185,4 +213,7 @@ Partial Class Pricipal
     Friend WithEvents VerticalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HorizontalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CascadaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents UsuariosToolStripStatusLabel As ToolStripStatusLabel
+    Friend WithEvents MaquinasToolStripStatusLabel As ToolStripStatusLabel
 End Class
