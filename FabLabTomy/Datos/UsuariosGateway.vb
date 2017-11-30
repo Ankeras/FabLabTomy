@@ -1,5 +1,3 @@
-﻿Module UsuariosGateway
-
-    'Clase para hacer los gateways correspondientes a los usuarios
-
-End Module
+﻿Public Class UsuariosGateway
+    'Punto de acceso a base de datos(FabLabDB)
+End Class

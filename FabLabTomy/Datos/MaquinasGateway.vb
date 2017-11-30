@@ -1,9 +1,12 @@
 ﻿Imports System.Data.SqlClient
 
 
-Module MaquinasGateway
+''' <summary>
+''' Clase que define un gateway para la tabla Maquinas
+''' </summary>
+Public Class MaquinasGateway
 
-    'cadena de conexion que se usará cada vex que se abra conexión
-    Dim conexion As New SqlConnection(My.Settings.cadena)
+    'objeto con el que abriremos la conexión
+    Private conexion As SqlConnection
 
-End Module
+End Class
