@@ -36,7 +36,7 @@ Public Class MaquinasGateway
     ''' <param name="tipo">Entero que indica el tipo de máquina</param>
     ''' <param name="descripcion">Descripción de la máquina</param>
     ''' <param name="caracteristicas">Características técnicas</param>
-    ''' <returns></returns>
+    ''' <returns>Número de filas cambiadas al ejecutar la consulta</returns>
     Public Function Insertar(modelo As String, precioHora As Decimal, fechaCompra As DateTime,
                              telefonoSAT As String, tipo As Integer, descripcion As String,
                              caracteristicas As String) As Integer
@@ -115,4 +115,137 @@ Public Class MaquinasGateway
         Return filas
     End Function
 
+    ''' <summary>
+    ''' Método para actualizar un registro de la tabla Maquinas de la base de datos
+    ''' </summary>
+    ''' <param name="modelo">Modelo de la máquina</param>
+    ''' <param name="precioHora">Precio por hora de alquiler</param>
+    ''' <param name="fechaCompra">Fecha de la compra de la máquina</param>
+    ''' <param name="telefonoSAT">Teléfono de Servicio de Atención Técnica</param>
+    ''' <param name="tipo">Entero que indica el tipo de máquina</param>
+    ''' <param name="descripcion">Descripción de la máquina</param>
+    ''' <param name="caracteristicas">Características técnicas</param>
+    ''' <param name="id">Id del registro que se va a actualizar</param>
+    ''' <returns>Número de filas cambiadas al ejecutar la consulta</returns>
+    Public Function Actualizar(modelo As String, precioHora As Decimal, fechaCompra As DateTime,
+                             telefonoSAT As String, tipo As Integer, descripcion As String,
+                             caracteristicas As String, id As Integer) As Integer
+        'Variable que devolveremos indicando el número de filas afectadas
+        Dim filas As Integer
+
+        'Consulta SQL a ejecutar
+        Dim consulta As String = "UPDATE Maquinas SET modelo=@modelo,precio_hora=@precioHora,fecha_compra=@fechaCompra," &
+            "telefono_sat=@telefonoSAT,tipo=@tipo,descripcion=@descripcion,caracteristicas=@caracteristicas WHERE id=@id"
+
+
+        'Filtramos los parámetros y en caso de nulos o vacíos lanzamos excepción si procede, si tienen valor lo asignamos
+        If modelo = "" Or modelo Is Nothing Then
+            Throw New ArgumentException("El modelo no puede estar vacío")
+        Else
+            comando.Parameters.Add("@modelo", SqlDbType.VarChar)
+            comando.Parameters("@modelo").Value = modelo
+        End If
+
+        If precioHora <= 0 Then
+            Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
+        Else
+            comando.Parameters.Add("@precioHora", SqlDbType.Money)
+            comando.Parameters("@precioHora").Value = precioHora
+        End If
+
+        If fechaCompra = DateTime.MinValue Then
+            Throw New ArgumentException("La fecha de compra no puede estar vacía")
+        Else
+            comando.Parameters.Add("@fechaCompra", SqlDbType.Date)
+            comando.Parameters("@fechaCompra").Value = fechaCompra
+        End If
+
+        comando.Parameters.Add("@telefonoSAT", SqlDbType.VarChar)
+        If telefonoSAT = "" Or telefonoSAT Is Nothing Then
+            comando.Parameters("@telefonoSAT").Value = DBNull.Value
+        Else
+            comando.Parameters("@telefonoSAT").Value = telefonoSAT
+        End If
+
+        If tipo < 1 Then
+            Throw New ArgumentException("Se debe especificar un tipo")
+        Else
+            comando.Parameters.Add("@tipo", SqlDbType.Int)
+            comando.Parameters("@tipo").Value = tipo
+        End If
+
+        comando.Parameters.Add("@descripcion", SqlDbType.Text)
+        If descripcion = "" Or descripcion Is Nothing Then
+            comando.Parameters("@descripcion").Value = DBNull.Value
+        Else
+            comando.Parameters("@descripcion").Value = descripcion
+        End If
+
+        comando.Parameters.Add("@caracteristicas", SqlDbType.Text)
+        If caracteristicas = "" Or caracteristicas Is Nothing Then
+            comando.Parameters("@caracteristicas").Value = DBNull.Value
+        Else
+            comando.Parameters("@caracteristicas").Value = caracteristicas
+        End If
+
+        If id <= 0 Then
+            Throw New ArgumentException("El id no puede ser menor que 1")
+        Else
+            comando.Parameters.Add("@id", SqlDbType.Int)
+            comando.Parameters("@id").Value = id
+        End If
+
+        'Ejecución de la consulta
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            filas = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+        'Devolvemos la variable
+        Return filas
+    End Function
+
+    ''' <summary>
+    ''' Método para eliminar un registro de la tabla Maquinas de la base de datos
+    ''' </summary>
+    ''' <param name="id">Id del registro que se va a eliminar</param>
+    ''' <returns>Filas afectadas al ejecutar la consulta</returns>
+    Public Function Eliminar(id As Integer) As Integer
+        'Variable que devolveremos indicando el número de filas afectadas
+        Dim filas As Integer
+
+        'Consulta SQL a ejecutar
+        Dim consulta As String = "DELETE FROM Maquinas WHERE id=@id"
+
+        'Compruebo que el id no es 0 o menor y lo añado a los parámetros
+        If id <= 0 Then
+            Throw New ArgumentException("El id no puede ser menor que 1")
+        Else
+            comando.Parameters.Add("@id", SqlDbType.Int)
+            comando.Parameters("@id").Value = id
+        End If
+
+        'Ejecución de la consulta
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            filas = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+        'Devolvemos la variable
+        Return filas
+    End Function
 End Class
