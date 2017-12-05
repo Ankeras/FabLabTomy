@@ -79,6 +79,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Codigo\NegocioMaquinas.vb" />
+    <Compile Include="Codigo\NegocioUsuarios.vb" />
     <Compile Include="Datos\MaquinasGateway.vb" />
     <Compile Include="Datos\UsuariosGateway.vb" />
     <Compile Include="DIseño\EULA.Designer.vb">
@@ -143,6 +145,9 @@
     <EmbeddedResource Include="DIseño\EULA.resx">
       <DependentUpon>EULA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\GestionUsuarios.resx">
+      <DependentUpon>GestionUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DIseño\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -171,8 +176,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Codigo\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

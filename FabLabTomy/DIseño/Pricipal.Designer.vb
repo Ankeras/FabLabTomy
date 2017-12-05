@@ -25,7 +25,7 @@ Partial Class Pricipal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.SadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestionUsuariosçToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SdadsadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevaMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GestionMaquinasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,7 +57,7 @@ Partial Class Pricipal
         '
         'SadaToolStripMenuItem
         '
-        Me.SadaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUsuarioToolStripMenuItem, Me.GestionUsuariosçToolStripMenuItem})
+        Me.SadaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUsuarioToolStripMenuItem, Me.GestionUsuariosToolStripMenuItem})
         Me.SadaToolStripMenuItem.Name = "SadaToolStripMenuItem"
         Me.SadaToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.SadaToolStripMenuItem.Text = "Usuarios"
@@ -68,11 +68,11 @@ Partial Class Pricipal
         Me.NuevoUsuarioToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.NuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario"
         '
-        'GestionUsuariosçToolStripMenuItem
+        'GestionUsuariosToolStripMenuItem
         '
-        Me.GestionUsuariosçToolStripMenuItem.Name = "GestionUsuariosçToolStripMenuItem"
-        Me.GestionUsuariosçToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.GestionUsuariosçToolStripMenuItem.Text = "Gestion Usuarios"
+        Me.GestionUsuariosToolStripMenuItem.Name = "GestionUsuariosToolStripMenuItem"
+        Me.GestionUsuariosToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.GestionUsuariosToolStripMenuItem.Text = "Gestion Usuarios"
         '
         'SdadsadToolStripMenuItem
         '
@@ -201,7 +201,7 @@ Partial Class Pricipal
     Friend WithEvents SdadsadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AsdadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevoUsuarioToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GestionUsuariosçToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GestionUsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevaMaquinaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GestionMaquinasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VentanaToolStripMenuItem As ToolStripMenuItem

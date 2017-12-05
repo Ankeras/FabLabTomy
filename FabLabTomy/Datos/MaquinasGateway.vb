@@ -248,4 +248,35 @@ Public Class MaquinasGateway
         'Devolvemos la variable
         Return filas
     End Function
+
+    ''' <summary>
+    ''' Método para seleccionar todos los registros de la tabla Maquinas
+    ''' </summary>
+    ''' <returns>Devuelve los datos de la tabla en un objeto DataTable</returns>
+    Public Function SeleccionarTodasLasMaquinas() As DataTable
+        'Consulta SQL
+        Dim consulta As String = "SELECT * FROM Maquinas"
+        'Objeto que devolveremos
+        Dim resultado As New DataTable
+        'Lector de la consulta
+        Dim lector As SqlDataReader
+
+        'Ejecución de la consulta
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            lector = comando.ExecuteReader
+
+            'Carga del resultado
+            resultado.Load(lector)
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If conexion IsNot Nothing Then
+                conexion.Close()
+            End If
+        End Try
+
+        Return resultado
+    End Function
 End Class

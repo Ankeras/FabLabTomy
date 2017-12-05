@@ -41,7 +41,7 @@
         usuario.Show()
     End Sub
 
-    Private Sub GestionUsuariosçToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionUsuariosçToolStripMenuItem.Click
+    Private Sub GestionUsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionUsuariosToolStripMenuItem.Click
         Dim usuario As New GestionUsuarios
         usuario.MdiParent = Me
         usuario.Text = "Gestión de Usuarios"

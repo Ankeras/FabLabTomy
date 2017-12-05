@@ -22,8 +22,171 @@ Partial Class GestionUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.BotonesInferiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.UsuariosDataGridView = New System.Windows.Forms.DataGridView()
+        Me.SuperiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.BuscarLabel = New System.Windows.Forms.Label()
+        Me.BucarTextBox = New System.Windows.Forms.TextBox()
+        Me.NuevoUsuarioButton = New System.Windows.Forms.Button()
+        Me.EliminarButton = New System.Windows.Forms.Button()
+        Me.EditarButton = New System.Windows.Forms.Button()
+        Me.ConsultarButton = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.BotonesInferiorTableLayoutPanel.SuspendLayout()
+        CType(Me.UsuariosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuperiorTableLayoutPanel.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 610.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.BotonesInferiorTableLayoutPanel, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.UsuariosDataGridView, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.SuperiorTableLayoutPanel, 1, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 304.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(769, 451)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'BotonesInferiorTableLayoutPanel
+        '
+        Me.BotonesInferiorTableLayoutPanel.ColumnCount = 4
+        Me.BotonesInferiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.BotonesInferiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.BotonesInferiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.BotonesInferiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.BotonesInferiorTableLayoutPanel.Controls.Add(Me.EliminarButton, 3, 0)
+        Me.BotonesInferiorTableLayoutPanel.Controls.Add(Me.EditarButton, 2, 0)
+        Me.BotonesInferiorTableLayoutPanel.Controls.Add(Me.ConsultarButton, 1, 0)
+        Me.BotonesInferiorTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BotonesInferiorTableLayoutPanel.Location = New System.Drawing.Point(81, 383)
+        Me.BotonesInferiorTableLayoutPanel.Name = "BotonesInferiorTableLayoutPanel"
+        Me.BotonesInferiorTableLayoutPanel.RowCount = 1
+        Me.BotonesInferiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.BotonesInferiorTableLayoutPanel.Size = New System.Drawing.Size(604, 65)
+        Me.BotonesInferiorTableLayoutPanel.TabIndex = 0
+        '
+        'UsuariosDataGridView
+        '
+        Me.UsuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.UsuariosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.UsuariosDataGridView.Location = New System.Drawing.Point(81, 79)
+        Me.UsuariosDataGridView.Name = "UsuariosDataGridView"
+        Me.UsuariosDataGridView.Size = New System.Drawing.Size(604, 298)
+        Me.UsuariosDataGridView.TabIndex = 1
+        '
+        'SuperiorTableLayoutPanel
+        '
+        Me.SuperiorTableLayoutPanel.ColumnCount = 2
+        Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.0!))
+        Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarLabel, 0, 0)
+        Me.SuperiorTableLayoutPanel.Controls.Add(Me.BucarTextBox, 0, 1)
+        Me.SuperiorTableLayoutPanel.Controls.Add(Me.NuevoUsuarioButton, 1, 1)
+        Me.SuperiorTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SuperiorTableLayoutPanel.Location = New System.Drawing.Point(81, 3)
+        Me.SuperiorTableLayoutPanel.Name = "SuperiorTableLayoutPanel"
+        Me.SuperiorTableLayoutPanel.RowCount = 2
+        Me.SuperiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
+        Me.SuperiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
+        Me.SuperiorTableLayoutPanel.Size = New System.Drawing.Size(604, 70)
+        Me.SuperiorTableLayoutPanel.TabIndex = 2
+        '
+        'BuscarLabel
+        '
+        Me.BuscarLabel.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.BuscarLabel.AutoSize = True
+        Me.BuscarLabel.Location = New System.Drawing.Point(3, 7)
+        Me.BuscarLabel.Name = "BuscarLabel"
+        Me.BuscarLabel.Size = New System.Drawing.Size(43, 13)
+        Me.BuscarLabel.TabIndex = 0
+        Me.BuscarLabel.Text = "Buscar:"
+        '
+        'BucarTextBox
+        '
+        Me.BucarTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.BucarTextBox.Location = New System.Drawing.Point(3, 39)
+        Me.BucarTextBox.Name = "BucarTextBox"
+        Me.BucarTextBox.Size = New System.Drawing.Size(166, 20)
+        Me.BucarTextBox.TabIndex = 1
+        '
+        'NuevoUsuarioButton
+        '
+        Me.NuevoUsuarioButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.NuevoUsuarioButton.Location = New System.Drawing.Point(456, 37)
+        Me.NuevoUsuarioButton.Name = "NuevoUsuarioButton"
+        Me.NuevoUsuarioButton.Size = New System.Drawing.Size(145, 23)
+        Me.NuevoUsuarioButton.TabIndex = 2
+        Me.NuevoUsuarioButton.Text = "Nuevo Usuario"
+        Me.NuevoUsuarioButton.UseVisualStyleBackColor = True
+        '
+        'EliminarButton
+        '
+        Me.EliminarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.EliminarButton.Location = New System.Drawing.Point(456, 21)
+        Me.EliminarButton.Name = "EliminarButton"
+        Me.EliminarButton.Size = New System.Drawing.Size(145, 23)
+        Me.EliminarButton.TabIndex = 3
+        Me.EliminarButton.Text = "Eliminar"
+        Me.EliminarButton.UseVisualStyleBackColor = True
+        '
+        'EditarButton
+        '
+        Me.EditarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.EditarButton.Location = New System.Drawing.Point(305, 21)
+        Me.EditarButton.Name = "EditarButton"
+        Me.EditarButton.Size = New System.Drawing.Size(145, 23)
+        Me.EditarButton.TabIndex = 4
+        Me.EditarButton.Text = "Editar"
+        Me.EditarButton.UseVisualStyleBackColor = True
+        '
+        'ConsultarButton
+        '
+        Me.ConsultarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ConsultarButton.Location = New System.Drawing.Point(154, 21)
+        Me.ConsultarButton.Name = "ConsultarButton"
+        Me.ConsultarButton.Size = New System.Drawing.Size(145, 23)
+        Me.ConsultarButton.TabIndex = 5
+        Me.ConsultarButton.Text = "Consultar"
+        Me.ConsultarButton.UseVisualStyleBackColor = True
+        '
+        'GestionUsuarios
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(769, 451)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(785, 490)
+        Me.MinimumSize = New System.Drawing.Size(785, 490)
+        Me.Name = "GestionUsuarios"
         Me.Text = "GestionUsuarios"
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.BotonesInferiorTableLayoutPanel.ResumeLayout(False)
+        CType(Me.UsuariosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SuperiorTableLayoutPanel.ResumeLayout(False)
+        Me.SuperiorTableLayoutPanel.PerformLayout()
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents BotonesInferiorTableLayoutPanel As TableLayoutPanel
+    Friend WithEvents EliminarButton As Button
+    Friend WithEvents EditarButton As Button
+    Friend WithEvents ConsultarButton As Button
+    Friend WithEvents UsuariosDataGridView As DataGridView
+    Friend WithEvents SuperiorTableLayoutPanel As TableLayoutPanel
+    Friend WithEvents BuscarLabel As Label
+    Friend WithEvents BucarTextBox As TextBox
+    Friend WithEvents NuevoUsuarioButton As Button
 End Class
