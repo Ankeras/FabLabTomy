@@ -77,5 +77,11 @@ FabLabTomy
  <param name="id">Id del registro que se va a eliminar</param>
  <returns>Filas afectadas al ejecutar la consulta</returns>
 </member>
+<member name="M:FabLabTomy.MaquinasGateway.SeleccionarTodasLasMaquinas">
+ <summary>
+ Método para seleccionar todos los registros de la tabla Maquinas
+ </summary>
+ <returns>Devuelve los datos de la tabla en un objeto DataTable</returns>
+</member>
 </members>
 </doc>
