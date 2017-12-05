@@ -22,5 +22,60 @@ FabLabTomy
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:FabLabTomy.MaquinasGateway">
+ <summary>
+ Clase que define un gateway para la tabla Maquinas
+ </summary>
+</member>
+<member name="F:FabLabTomy.MaquinasGateway.conexion">
+ <summary>
+ Objeto con el que abriremos la conexión
+ </summary>
+</member>
+<member name="F:FabLabTomy.MaquinasGateway.comando">
+ <summary>
+ Objeto con el que ejecutaremos las consultas
+ </summary>
+</member>
+<member name="M:FabLabTomy.MaquinasGateway.#ctor(System.String)">
+ <summary>
+ Constructor de la clase, crea el acceso a la base de datos
+ </summary>
+ <param name="cadenaConexion">Cadena de conexion de la base de datos</param>
+</member>
+<member name="M:FabLabTomy.MaquinasGateway.Insertar(System.String,System.Decimal,System.DateTime,System.String,System.Int32,System.String,System.String)">
+ <summary>
+ Método para insertar un registro(máquina) en la tabla Máquinas de la base de datos
+ </summary>
+ <param name="modelo">Modelo de la máquina</param>
+ <param name="precioHora">Precio por hora de alquiler</param>
+ <param name="fechaCompra">Fecha de la compra de la máquina</param>
+ <param name="telefonoSAT">Teléfono de Servicio de Atención Técnica</param>
+ <param name="tipo">Entero que indica el tipo de máquina</param>
+ <param name="descripcion">Descripción de la máquina</param>
+ <param name="caracteristicas">Características técnicas</param>
+ <returns>Número de filas cambiadas al ejecutar la consulta</returns>
+</member>
+<member name="M:FabLabTomy.MaquinasGateway.Actualizar(System.String,System.Decimal,System.DateTime,System.String,System.Int32,System.String,System.String,System.Int32)">
+ <summary>
+ Método para actualizar un registro de la tabla Maquinas de la base de datos
+ </summary>
+ <param name="modelo">Modelo de la máquina</param>
+ <param name="precioHora">Precio por hora de alquiler</param>
+ <param name="fechaCompra">Fecha de la compra de la máquina</param>
+ <param name="telefonoSAT">Teléfono de Servicio de Atención Técnica</param>
+ <param name="tipo">Entero que indica el tipo de máquina</param>
+ <param name="descripcion">Descripción de la máquina</param>
+ <param name="caracteristicas">Características técnicas</param>
+ <param name="id">Id del registro que se va a actualizar</param>
+ <returns>Número de filas cambiadas al ejecutar la consulta</returns>
+</member>
+<member name="M:FabLabTomy.MaquinasGateway.Eliminar(System.Int32)">
+ <summary>
+ Método para eliminar un registro de la tabla Maquinas de la base de datos
+ </summary>
+ <param name="id">Id del registro que se va a eliminar</param>
+ <returns>Filas afectadas al ejecutar la consulta</returns>
+</member>
 </members>
 </doc>
