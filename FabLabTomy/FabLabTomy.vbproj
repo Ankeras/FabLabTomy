@@ -82,6 +82,7 @@
     <Compile Include="Codigo\NegocioMaquinas.vb" />
     <Compile Include="Codigo\NegocioUsuarios.vb" />
     <Compile Include="Datos\MaquinasGateway.vb" />
+    <Compile Include="Datos\TiposMaquinaGateway.vb" />
     <Compile Include="Datos\UsuariosGateway.vb" />
     <Compile Include="DIseño\EULA.Designer.vb">
       <DependentUpon>EULA.vb</DependentUpon>
@@ -148,6 +149,9 @@
     <EmbeddedResource Include="DIseño\GestionUsuarios.resx">
       <DependentUpon>GestionUsuarios.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\NuevaMaquina.resx">
+      <DependentUpon>NuevaMaquina.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DIseño\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +180,8 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -250,7 +250,7 @@ Public Class MaquinasGateway
     End Function
 
     ''' <summary>
-    ''' Método para seleccionar todos los registros de la tabla Maquinas
+    ''' Método para seleccionar todos los campos de la tabla Maquinas
     ''' </summary>
     ''' <returns>Devuelve los datos de la tabla en un objeto DataTable</returns>
     Public Function SeleccionarTodasLasMaquinas() As DataTable
