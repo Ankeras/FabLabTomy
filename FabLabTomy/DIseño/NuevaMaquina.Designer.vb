@@ -24,15 +24,15 @@ Partial Class NuevaMaquina
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.ModeloTextBox = New System.Windows.Forms.TextBox()
+        Me.PrecioHoraTextBox = New System.Windows.Forms.TextBox()
         Me.ModeloLabel = New System.Windows.Forms.Label()
         Me.TelefonoSATLabel = New System.Windows.Forms.Label()
         Me.PrecioHoraLabel = New System.Windows.Forms.Label()
         Me.TipoMaquinaLabel = New System.Windows.Forms.Label()
         Me.FechaCompraLabel = New System.Windows.Forms.Label()
-        Me.PrecioHoraTextBox = New System.Windows.Forms.TextBox()
         Me.FechaCompraDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.TipoMaquinaComboBox = New System.Windows.Forms.ComboBox()
-        Me.ModeloTextBox = New System.Windows.Forms.TextBox()
         Me.TelefonoSATTextBox = New System.Windows.Forms.TextBox()
         Me.AnadirTipoPictureBox = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
@@ -106,6 +106,22 @@ Partial Class NuevaMaquina
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(930, 138)
         Me.TableLayoutPanel2.TabIndex = 0
         '
+        'ModeloTextBox
+        '
+        Me.ModeloTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.ModeloTextBox.Location = New System.Drawing.Point(142, 24)
+        Me.ModeloTextBox.Name = "ModeloTextBox"
+        Me.ModeloTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.ModeloTextBox.TabIndex = 11
+        '
+        'PrecioHoraTextBox
+        '
+        Me.PrecioHoraTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.PrecioHoraTextBox.Location = New System.Drawing.Point(420, 24)
+        Me.PrecioHoraTextBox.Name = "PrecioHoraTextBox"
+        Me.PrecioHoraTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.PrecioHoraTextBox.TabIndex = 6
+        '
         'ModeloLabel
         '
         Me.ModeloLabel.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -156,14 +172,6 @@ Partial Class NuevaMaquina
         Me.FechaCompraLabel.TabIndex = 4
         Me.FechaCompraLabel.Text = "Fecha de compra"
         '
-        'PrecioHoraTextBox
-        '
-        Me.PrecioHoraTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.PrecioHoraTextBox.Location = New System.Drawing.Point(420, 24)
-        Me.PrecioHoraTextBox.Name = "PrecioHoraTextBox"
-        Me.PrecioHoraTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.PrecioHoraTextBox.TabIndex = 6
-        '
         'FechaCompraDateTimePicker
         '
         Me.FechaCompraDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -181,14 +189,6 @@ Partial Class NuevaMaquina
         Me.TipoMaquinaComboBox.Name = "TipoMaquinaComboBox"
         Me.TipoMaquinaComboBox.Size = New System.Drawing.Size(121, 21)
         Me.TipoMaquinaComboBox.TabIndex = 10
-        '
-        'ModeloTextBox
-        '
-        Me.ModeloTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.ModeloTextBox.Location = New System.Drawing.Point(142, 24)
-        Me.ModeloTextBox.Name = "ModeloTextBox"
-        Me.ModeloTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.ModeloTextBox.TabIndex = 11
         '
         'TelefonoSATTextBox
         '

@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Codigo\NegocioMaquinas.vb" />
+    <Compile Include="Codigo\NegocioTiposMaquina.vb" />
     <Compile Include="Codigo\NegocioUsuarios.vb" />
     <Compile Include="Datos\MaquinasGateway.vb" />
     <Compile Include="Datos\TiposMaquinaGateway.vb" />
