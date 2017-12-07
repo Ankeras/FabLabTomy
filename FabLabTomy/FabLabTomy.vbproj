@@ -84,6 +84,7 @@
     <Compile Include="Codigo\NegocioUsuarios.vb" />
     <Compile Include="Datos\MaquinasGateway.vb" />
     <Compile Include="Datos\TiposMaquinaGateway.vb" />
+    <Compile Include="Datos\TiposUsuariosGateway.vb" />
     <Compile Include="Datos\UsuariosGateway.vb" />
     <Compile Include="DIseño\EULA.Designer.vb">
       <DependentUpon>EULA.vb</DependentUpon>
@@ -146,6 +147,9 @@
   <ItemGroup>
     <EmbeddedResource Include="DIseño\EULA.resx">
       <DependentUpon>EULA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\GestionMaquinas.resx">
+      <DependentUpon>GestionMaquinas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DIseño\GestionUsuarios.resx">
       <DependentUpon>GestionUsuarios.vb</DependentUpon>

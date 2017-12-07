@@ -34,6 +34,7 @@ Partial Class NuevaMaquina
         Me.FechaCompraDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.TipoMaquinaComboBox = New System.Windows.Forms.ComboBox()
         Me.TelefonoSATTextBox = New System.Windows.Forms.TextBox()
+        Me.AnadirTipoPictureBox = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.DescripcionTextBox = New System.Windows.Forms.TextBox()
         Me.CaracteristicasTextBox = New System.Windows.Forms.TextBox()
@@ -47,9 +48,9 @@ Partial Class NuevaMaquina
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.AceptarButton = New System.Windows.Forms.Button()
         Me.CancelarButton = New System.Windows.Forms.Button()
-        Me.AnadirTipoButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.AnadirTipoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
@@ -95,7 +96,7 @@ Partial Class NuevaMaquina
         Me.TableLayoutPanel2.Controls.Add(Me.FechaCompraDateTimePicker, 6, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.TipoMaquinaComboBox, 3, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.TelefonoSATTextBox, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.AnadirTipoButton, 4, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.AnadirTipoPictureBox, 4, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -196,6 +197,17 @@ Partial Class NuevaMaquina
         Me.TelefonoSATTextBox.Name = "TelefonoSATTextBox"
         Me.TelefonoSATTextBox.Size = New System.Drawing.Size(121, 20)
         Me.TelefonoSATTextBox.TabIndex = 12
+        '
+        'AnadirTipoPictureBox
+        '
+        Me.AnadirTipoPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.AnadirTipoPictureBox.Image = Global.FabLabTomy.My.Resources.Resources.plus
+        Me.AnadirTipoPictureBox.Location = New System.Drawing.Point(559, 87)
+        Me.AnadirTipoPictureBox.Name = "AnadirTipoPictureBox"
+        Me.AnadirTipoPictureBox.Size = New System.Drawing.Size(32, 32)
+        Me.AnadirTipoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.AnadirTipoPictureBox.TabIndex = 13
+        Me.AnadirTipoPictureBox.TabStop = False
         '
         'TableLayoutPanel3
         '
@@ -348,17 +360,6 @@ Partial Class NuevaMaquina
         Me.CancelarButton.Text = "Cancelar"
         Me.CancelarButton.UseVisualStyleBackColor = True
         '
-        'AnadirTipoButton
-        '
-        Me.AnadirTipoButton.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.AnadirTipoButton.BackgroundImage = Global.FabLabTomy.My.Resources.Resources.plus
-        Me.AnadirTipoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.AnadirTipoButton.Location = New System.Drawing.Point(559, 88)
-        Me.AnadirTipoButton.Name = "AnadirTipoButton"
-        Me.AnadirTipoButton.Size = New System.Drawing.Size(30, 30)
-        Me.AnadirTipoButton.TabIndex = 13
-        Me.AnadirTipoButton.UseVisualStyleBackColor = True
-        '
         'NuevaMaquina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -370,6 +371,7 @@ Partial Class NuevaMaquina
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
+        CType(Me.AnadirTipoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel4.ResumeLayout(False)
@@ -392,6 +394,7 @@ Partial Class NuevaMaquina
     Friend WithEvents FechaCompraDateTimePicker As DateTimePicker
     Friend WithEvents TipoMaquinaComboBox As ComboBox
     Friend WithEvents TelefonoSATTextBox As TextBox
+    Friend WithEvents AnadirTipoPictureBox As PictureBox
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents DescripcionTextBox As TextBox
     Friend WithEvents CaracteristicasTextBox As TextBox
@@ -405,5 +408,4 @@ Partial Class NuevaMaquina
     Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents AceptarButton As Button
     Friend WithEvents CancelarButton As Button
-    Friend WithEvents AnadirTipoButton As Button
 End Class
