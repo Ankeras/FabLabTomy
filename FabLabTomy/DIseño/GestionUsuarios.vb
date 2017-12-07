@@ -8,5 +8,6 @@
 
     Private Sub ConsultarButton_Click(sender As Object, e As EventArgs) Handles ConsultarButton.Click
         'UsuariosDataGridView.SelectedRows(0).Index
+
     End Sub
 End Class

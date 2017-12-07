@@ -113,7 +113,7 @@ Public Class UsuariosGateway
     End Function
 
 
-    Public Function SelecionarTodos() As DataTable
+    Public Function SelecionarToddos() As DataTable
         Dim consulta As String = String.Format("SELECT * FROM Usuarios")
         Dim resultado As New DataTable
         Dim lector As SqlDataReader
@@ -233,31 +233,8 @@ Public Class UsuariosGateway
         Dim resultado As New DataTable
         Dim lector As SqlDataReader
 
-        Try
-            conexion.Open()
-            comando.CommandText = consulta
-            lector = comando.ExecuteReader()
 
 
-            resultado.Load(lector)
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
-        Finally
-            If (conexion IsNot Nothing) Then
-                conexion.Close()
-            End If
-        End Try
-    End Function
-    Public Function SeleccionarUsuario(tipoUsuario As String) As DataTable
-
-        Dim consulta As String = String.Format("SELECT * FROM Usuarios WHERE id={0}", tipoUsuario)
-        Dim resultado As New DataTable
-        Dim lector As SqlDataReader
-
-
-        If tipoUsuario = "" Or tipoUsuario Is Nothing Then
-            Throw New ArgumentException("El identificador no puede estar vacío")
-        End If
 
         Try
             conexion.Open()
@@ -273,10 +250,7 @@ Public Class UsuariosGateway
                 conexion.Close()
             End If
         End Try
-
-
-        Return resultado
-
     End Function
+
     'Punto de acceso a base de datos(FabLabDB)
 End Class

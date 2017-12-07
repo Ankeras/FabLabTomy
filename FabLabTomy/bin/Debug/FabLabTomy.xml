@@ -115,28 +115,24 @@ FabLabTomy
  </summary>
  <returns>Devuelve los datos de la tabla en un objeto de tipo DataTable</returns>
 </member>
-<member name="F:FabLabTomy.TiposUsuariosGateway.conexion">
- <summary>
- Objeto con el que abriremos la conexión
- </summary>
-</member>
-<member name="F:FabLabTomy.TiposUsuariosGateway.comando">
- <summary>
- Objeto con el que ejecutaremos las consultas
- </summary>
-</member>
-<member name="M:FabLabTomy.TiposUsuariosGateway.#ctor(System.String)">
- <summary>
- Constructor de la clase, crea el acceso a la base de datos
- </summary>
- <param name="cadenaConexion">Cadena de conexion de la base de datos</param>
-</member>
 <member name="M:FabLabTomy.UsuariosGateway.SelecionarComentario(System.String)">
  <summary>
  MIRAAAAR COMENTARIO EN BD !
  </summary>
  <param name="comentario"></param>
  <returns></returns>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.RellenarComboBox">
+ <summary>
+ Método para cargar el ComboBox con los tipos de máquinas
+ </summary>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.CancelarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Al pulsar el botón Cancelar se cerrará el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
 </member>
 </members>
 </doc>
