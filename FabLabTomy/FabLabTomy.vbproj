@@ -84,6 +84,7 @@
     <Compile Include="Codigo\NegocioUsuarios.vb" />
     <Compile Include="Datos\MaquinasGateway.vb" />
     <Compile Include="Datos\TiposMaquinaGateway.vb" />
+    <Compile Include="Datos\TiposUsuariosGateway.vb" />
     <Compile Include="Datos\UsuariosGateway.vb" />
     <Compile Include="DIseño\EULA.Designer.vb">
       <DependentUpon>EULA.vb</DependentUpon>
