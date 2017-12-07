@@ -5,5 +5,6 @@
 
         Return gateway.SeleccionarTodosLosTipos()
     End Function
+    'prueba
 
 End Module
