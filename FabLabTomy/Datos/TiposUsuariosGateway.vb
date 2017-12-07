@@ -55,7 +55,7 @@ Public Class TiposUsuariosGateway
         Return filas
     End Function
 
- ¡
+
     Public Function SeleccionarTodosLosTipos() As DataTable
         'Consulta SQL
         Dim consulta As String = "SELECT * FROM TiposUsuarios"

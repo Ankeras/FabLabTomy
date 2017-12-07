@@ -148,6 +148,9 @@
     <EmbeddedResource Include="DIseño\EULA.resx">
       <DependentUpon>EULA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\GestionMaquinas.resx">
+      <DependentUpon>GestionMaquinas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DIseño\GestionUsuarios.resx">
       <DependentUpon>GestionUsuarios.vb</DependentUpon>
     </EmbeddedResource>
