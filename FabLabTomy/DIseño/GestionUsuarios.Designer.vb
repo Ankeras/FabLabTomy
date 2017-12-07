@@ -24,14 +24,14 @@ Partial Class GestionUsuarios
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.BotonesInferiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.EliminarButton = New System.Windows.Forms.Button()
+        Me.EditarButton = New System.Windows.Forms.Button()
+        Me.ConsultarButton = New System.Windows.Forms.Button()
         Me.UsuariosDataGridView = New System.Windows.Forms.DataGridView()
         Me.SuperiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.BuscarLabel = New System.Windows.Forms.Label()
         Me.BucarTextBox = New System.Windows.Forms.TextBox()
         Me.NuevoUsuarioButton = New System.Windows.Forms.Button()
-        Me.EliminarButton = New System.Windows.Forms.Button()
-        Me.EditarButton = New System.Windows.Forms.Button()
-        Me.ConsultarButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.BotonesInferiorTableLayoutPanel.SuspendLayout()
         CType(Me.UsuariosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,6 +74,36 @@ Partial Class GestionUsuarios
         Me.BotonesInferiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.BotonesInferiorTableLayoutPanel.Size = New System.Drawing.Size(604, 65)
         Me.BotonesInferiorTableLayoutPanel.TabIndex = 0
+        '
+        'EliminarButton
+        '
+        Me.EliminarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.EliminarButton.Location = New System.Drawing.Point(456, 21)
+        Me.EliminarButton.Name = "EliminarButton"
+        Me.EliminarButton.Size = New System.Drawing.Size(145, 23)
+        Me.EliminarButton.TabIndex = 3
+        Me.EliminarButton.Text = "Eliminar"
+        Me.EliminarButton.UseVisualStyleBackColor = True
+        '
+        'EditarButton
+        '
+        Me.EditarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.EditarButton.Location = New System.Drawing.Point(305, 21)
+        Me.EditarButton.Name = "EditarButton"
+        Me.EditarButton.Size = New System.Drawing.Size(145, 23)
+        Me.EditarButton.TabIndex = 4
+        Me.EditarButton.Text = "Editar"
+        Me.EditarButton.UseVisualStyleBackColor = True
+        '
+        'ConsultarButton
+        '
+        Me.ConsultarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ConsultarButton.Location = New System.Drawing.Point(154, 21)
+        Me.ConsultarButton.Name = "ConsultarButton"
+        Me.ConsultarButton.Size = New System.Drawing.Size(145, 23)
+        Me.ConsultarButton.TabIndex = 5
+        Me.ConsultarButton.Text = "Consultar"
+        Me.ConsultarButton.UseVisualStyleBackColor = True
         '
         'UsuariosDataGridView
         '
@@ -128,36 +158,6 @@ Partial Class GestionUsuarios
         Me.NuevoUsuarioButton.TabIndex = 2
         Me.NuevoUsuarioButton.Text = "Nuevo Usuario"
         Me.NuevoUsuarioButton.UseVisualStyleBackColor = True
-        '
-        'EliminarButton
-        '
-        Me.EliminarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.EliminarButton.Location = New System.Drawing.Point(456, 21)
-        Me.EliminarButton.Name = "EliminarButton"
-        Me.EliminarButton.Size = New System.Drawing.Size(145, 23)
-        Me.EliminarButton.TabIndex = 3
-        Me.EliminarButton.Text = "Eliminar"
-        Me.EliminarButton.UseVisualStyleBackColor = True
-        '
-        'EditarButton
-        '
-        Me.EditarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.EditarButton.Location = New System.Drawing.Point(305, 21)
-        Me.EditarButton.Name = "EditarButton"
-        Me.EditarButton.Size = New System.Drawing.Size(145, 23)
-        Me.EditarButton.TabIndex = 4
-        Me.EditarButton.Text = "Editar"
-        Me.EditarButton.UseVisualStyleBackColor = True
-        '
-        'ConsultarButton
-        '
-        Me.ConsultarButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ConsultarButton.Location = New System.Drawing.Point(154, 21)
-        Me.ConsultarButton.Name = "ConsultarButton"
-        Me.ConsultarButton.Size = New System.Drawing.Size(145, 23)
-        Me.ConsultarButton.TabIndex = 5
-        Me.ConsultarButton.Text = "Consultar"
-        Me.ConsultarButton.UseVisualStyleBackColor = True
         '
         'GestionUsuarios
         '

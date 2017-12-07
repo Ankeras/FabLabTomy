@@ -9,4 +9,8 @@
     Private Sub ConsultarButton_Click(sender As Object, e As EventArgs) Handles ConsultarButton.Click
         'UsuariosDataGridView.SelectedRows(0).Index
     End Sub
+
+    Private Sub GestionUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        BucarTextBox.Focus()
+    End Sub
 End Class
