@@ -20,4 +20,10 @@
     Private Sub CancelarButton_Click(sender As Object, e As EventArgs) Handles CancelarButton.Click
         Me.Close()
     End Sub
+
+    Private Sub AnadirTipoButton_Click(sender As Object, e As EventArgs) Handles AnadirTipoButton.Click
+
+        InsertarTipo(InputBox("Escribe el nuevo tipo"))
+
+    End Sub
 End Class

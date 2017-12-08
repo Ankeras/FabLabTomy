@@ -138,5 +138,17 @@ FabLabTomy
  <param name="comentario"></param>
  <returns></returns>
 </member>
+<member name="M:FabLabTomy.NuevaMaquina.RellenarComboBox">
+ <summary>
+ Método para cargar el ComboBox con los tipos de máquinas
+ </summary>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.CancelarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Al pulsar el botón Cancelar se cerrará el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 </members>
 </doc>

@@ -34,6 +34,7 @@ Partial Class NuevaMaquina
         Me.FechaCompraDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.TipoMaquinaComboBox = New System.Windows.Forms.ComboBox()
         Me.TelefonoSATTextBox = New System.Windows.Forms.TextBox()
+        Me.AnadirTipoButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.DescripcionTextBox = New System.Windows.Forms.TextBox()
         Me.CaracteristicasTextBox = New System.Windows.Forms.TextBox()
@@ -47,7 +48,6 @@ Partial Class NuevaMaquina
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.AceptarButton = New System.Windows.Forms.Button()
         Me.CancelarButton = New System.Windows.Forms.Button()
-        Me.AnadirTipoButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -196,6 +196,17 @@ Partial Class NuevaMaquina
         Me.TelefonoSATTextBox.Name = "TelefonoSATTextBox"
         Me.TelefonoSATTextBox.Size = New System.Drawing.Size(121, 20)
         Me.TelefonoSATTextBox.TabIndex = 12
+        '
+        'AnadirTipoButton
+        '
+        Me.AnadirTipoButton.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.AnadirTipoButton.BackgroundImage = Global.FabLabTomy.My.Resources.Resources.plus
+        Me.AnadirTipoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.AnadirTipoButton.Location = New System.Drawing.Point(559, 88)
+        Me.AnadirTipoButton.Name = "AnadirTipoButton"
+        Me.AnadirTipoButton.Size = New System.Drawing.Size(30, 30)
+        Me.AnadirTipoButton.TabIndex = 14
+        Me.AnadirTipoButton.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel3
         '
@@ -347,17 +358,6 @@ Partial Class NuevaMaquina
         Me.CancelarButton.TabIndex = 1
         Me.CancelarButton.Text = "Cancelar"
         Me.CancelarButton.UseVisualStyleBackColor = True
-        '
-        'AnadirTipoButton
-        '
-        Me.AnadirTipoButton.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.AnadirTipoButton.BackgroundImage = Global.FabLabTomy.My.Resources.Resources.plus
-        Me.AnadirTipoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.AnadirTipoButton.Location = New System.Drawing.Point(559, 88)
-        Me.AnadirTipoButton.Name = "AnadirTipoButton"
-        Me.AnadirTipoButton.Size = New System.Drawing.Size(30, 30)
-        Me.AnadirTipoButton.TabIndex = 14
-        Me.AnadirTipoButton.UseVisualStyleBackColor = True
         '
         'NuevaMaquina
         '
