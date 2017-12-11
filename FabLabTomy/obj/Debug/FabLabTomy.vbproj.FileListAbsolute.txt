@@ -98,3 +98,5 @@ C:\Users\alumno\Source\Repos\FabLabTomy5\FabLabTomy\obj\Debug\FabLabTomy.pdb
 C:\Users\alumno\Source\Repos\FabLabTomy5\FabLabTomy\obj\Debug\FabLabTomy.GestionMaquinas.resources
 C:\Users\anton\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.GestionMaquinas.resources
 C:\Users\anton\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.NuevaMaquina.resources
+C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.GestionMaquinas.resources
+C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.NuevaMaquina.resources

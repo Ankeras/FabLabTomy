@@ -22,8 +22,14 @@
     End Sub
 
     Private Sub AnadirTipoButton_Click(sender As Object, e As EventArgs) Handles AnadirTipoButton.Click
+        Dim respuesta As String = InputBox("Escribe el nuevo tipo")
+        'Preguntar inputBox
+        If respuesta = "" Or respuesta Is Nothing Then
+            MessageBox.Show("El tipo no puede estar vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            InsertarTipo(respuesta)
+        End If
 
-        InsertarTipo(InputBox("Escribe el nuevo tipo"))
 
     End Sub
 End Class
