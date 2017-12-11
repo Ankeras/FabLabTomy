@@ -16,12 +16,8 @@
         If rol = 1 Then
             Dim resultado As DataTable = NegocioUsuarios.ObtenerUsuarioId(id)
             For Each row As DataRow In resultado.Rows
-
                 NombreTextBox.Text = CStr(row("nombre"))
-
             Next
-
-
         End If
     End Sub
 End Class

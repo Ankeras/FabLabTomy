@@ -100,3 +100,20 @@ C:\Users\anton\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1
 C:\Users\anton\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.NuevaMaquina.resources
 C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.GestionMaquinas.resources
 C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab1\FabLabTomy\obj\Debug\FabLabTomy.NuevaMaquina.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\FabLabTomy.exe.config
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\FabLabTomy.exe
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\FabLabTomy.pdb
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\FabLabTomy.xml
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.EULA.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.GestionMaquinas.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.GestionUsuarios.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.NuevaMaquina.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.NuevoUsuario.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.Pricipal.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.SplashV2.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.Resources.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.vbproj.GenerateResource.Cache
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.vbproj.CoreCompileInputs.cache
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.exe
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.xml
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.pdb

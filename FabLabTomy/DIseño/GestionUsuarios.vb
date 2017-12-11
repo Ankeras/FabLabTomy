@@ -9,8 +9,6 @@
 
     Private Sub ConsultarButton_Click(sender As Object, e As EventArgs) Handles ConsultarButton.Click
         Dim id As Integer = UsuariosDataGridView.CurrentCell.RowIndex + 1
-        form1.TableLayoutPanel2.Enabled = False
-        form1.TableLayoutPanel1.Enabled = False
         form1.rol = NuevoUsuario.RolAcceso.Consultar
         form1.id = id
         form1.ShowDialog()

@@ -1,5 +1,19 @@
 ﻿Public Class NuevaMaquina
+    Public id As Integer
+    Public Enum RolAcceso As Integer
+
+        Consultar = 1
+        Editar = 2
+    End Enum
+    Public rol As RolAcceso
     Private Sub NuevaMaquina_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If rol = 1 Then
+            'Dim resultado As DataTable = NegocioMaquinas.(id) ' Completar
+            '  For Each row As DataRow In resultado.Rows
+            'ModeloTextBox.Text = CStr(row("modelo"))
+            ' Next
+
+        End If
         RellenarComboBox()
     End Sub
 

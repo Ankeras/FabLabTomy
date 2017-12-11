@@ -31,11 +31,11 @@ Partial Class GestionMaquinas
         Me.ConsultarButton = New System.Windows.Forms.Button()
         Me.EditarButton = New System.Windows.Forms.Button()
         Me.EliminarButton = New System.Windows.Forms.Button()
-        Me.DatosDataGridView = New System.Windows.Forms.DataGridView()
+        Me.MaquinaDataGridView = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
-        CType(Me.DatosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MaquinaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -46,7 +46,7 @@ Partial Class GestionMaquinas
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.DatosDataGridView, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.MaquinaDataGridView, 1, 1)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(-1, -2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
@@ -145,13 +145,13 @@ Partial Class GestionMaquinas
         Me.EliminarButton.Text = "Eliminar"
         Me.EliminarButton.UseVisualStyleBackColor = True
         '
-        'DatosDataGridView
+        'MaquinaDataGridView
         '
-        Me.DatosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DatosDataGridView.Location = New System.Drawing.Point(79, 93)
-        Me.DatosDataGridView.Name = "DatosDataGridView"
-        Me.DatosDataGridView.Size = New System.Drawing.Size(574, 256)
-        Me.DatosDataGridView.TabIndex = 2
+        Me.MaquinaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MaquinaDataGridView.Location = New System.Drawing.Point(79, 93)
+        Me.MaquinaDataGridView.Name = "MaquinaDataGridView"
+        Me.MaquinaDataGridView.Size = New System.Drawing.Size(574, 256)
+        Me.MaquinaDataGridView.TabIndex = 2
         '
         'GestionMaquinas
         '
@@ -165,7 +165,7 @@ Partial Class GestionMaquinas
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.TableLayoutPanel3.ResumeLayout(False)
-        CType(Me.DatosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MaquinaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -179,5 +179,5 @@ Partial Class GestionMaquinas
     Friend WithEvents ConsultarButton As Button
     Friend WithEvents EditarButton As Button
     Friend WithEvents EliminarButton As Button
-    Friend WithEvents DatosDataGridView As DataGridView
+    Friend WithEvents MaquinaDataGridView As DataGridView
 End Class
