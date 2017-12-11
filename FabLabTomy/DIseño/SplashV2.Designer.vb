@@ -27,6 +27,8 @@ Partial Class SplashV2
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.CargandoLabel = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,11 +57,26 @@ Partial Class SplashV2
         Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
         Me.ProgressBar1.TabIndex = 1
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'CargandoLabel
+        '
+        Me.CargandoLabel.AutoSize = True
+        Me.CargandoLabel.BackColor = System.Drawing.Color.Transparent
+        Me.CargandoLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CargandoLabel.Location = New System.Drawing.Point(13, 342)
+        Me.CargandoLabel.Name = "CargandoLabel"
+        Me.CargandoLabel.Size = New System.Drawing.Size(0, 13)
+        Me.CargandoLabel.TabIndex = 2
+        '
         'SplashV2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(396, 399)
+        Me.Controls.Add(Me.CargandoLabel)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -75,4 +92,6 @@ Partial Class SplashV2
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents CargandoLabel As Label
 End Class

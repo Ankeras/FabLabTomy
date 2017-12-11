@@ -45,6 +45,8 @@
                     EmailTextBox.Text = CStr(row("email"))
                 End If
 
+                PanelSuperiorTableLayoutPanel.Enabled = False
+                PanelInferiorTableLayoutPanel.Enabled = False
 
 
 

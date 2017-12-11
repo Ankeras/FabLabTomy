@@ -32,7 +32,7 @@ Partial Class NuevoUsuario
         Me.CargarButton = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Fotolbl = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PanelInferiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.FechaDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.DireccionPostalTextBox = New System.Windows.Forms.TextBox()
@@ -53,16 +53,16 @@ Partial Class NuevoUsuario
         Me.OrganizacionLabel = New System.Windows.Forms.Label()
         Me.TelefonoLabel = New System.Windows.Forms.Label()
         Me.NombreLabel = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PanelSuperiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel6.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.PanelInferiorTableLayoutPanel.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
+        Me.PanelSuperiorTableLayoutPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel6
@@ -156,23 +156,23 @@ Partial Class NuevoUsuario
         Me.Fotolbl.TabIndex = 0
         Me.Fotolbl.Text = "Foto"
         '
-        'TableLayoutPanel1
+        'PanelInferiorTableLayoutPanel
         '
-        Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel6, 2, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(-1, 212)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.51852!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.48148!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(939, 270)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.PanelInferiorTableLayoutPanel.ColumnCount = 4
+        Me.PanelInferiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.PanelInferiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.PanelInferiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.PanelInferiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.PanelInferiorTableLayoutPanel.Controls.Add(Me.Panel3, 1, 0)
+        Me.PanelInferiorTableLayoutPanel.Controls.Add(Me.Panel4, 2, 0)
+        Me.PanelInferiorTableLayoutPanel.Controls.Add(Me.Panel6, 2, 1)
+        Me.PanelInferiorTableLayoutPanel.Location = New System.Drawing.Point(-1, 212)
+        Me.PanelInferiorTableLayoutPanel.Name = "PanelInferiorTableLayoutPanel"
+        Me.PanelInferiorTableLayoutPanel.RowCount = 2
+        Me.PanelInferiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.51852!))
+        Me.PanelInferiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.48148!))
+        Me.PanelInferiorTableLayoutPanel.Size = New System.Drawing.Size(939, 270)
+        Me.PanelInferiorTableLayoutPanel.TabIndex = 0
         '
         'Panel5
         '
@@ -352,32 +352,32 @@ Partial Class NuevoUsuario
         Me.NombreLabel.TabIndex = 30
         Me.NombreLabel.Text = "Nombre :"
         '
-        'TableLayoutPanel2
+        'PanelSuperiorTableLayoutPanel
         '
-        Me.TableLayoutPanel2.ColumnCount = 5
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.87859!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.60851!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.63904!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Panel2, 2, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Panel5, 3, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(-1, 1)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(939, 213)
-        Me.TableLayoutPanel2.TabIndex = 1
+        Me.PanelSuperiorTableLayoutPanel.ColumnCount = 5
+        Me.PanelSuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.PanelSuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.87859!))
+        Me.PanelSuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.60851!))
+        Me.PanelSuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.63904!))
+        Me.PanelSuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47.0!))
+        Me.PanelSuperiorTableLayoutPanel.Controls.Add(Me.Panel1, 1, 0)
+        Me.PanelSuperiorTableLayoutPanel.Controls.Add(Me.Panel2, 2, 0)
+        Me.PanelSuperiorTableLayoutPanel.Controls.Add(Me.Panel5, 3, 0)
+        Me.PanelSuperiorTableLayoutPanel.Location = New System.Drawing.Point(-1, 1)
+        Me.PanelSuperiorTableLayoutPanel.Name = "PanelSuperiorTableLayoutPanel"
+        Me.PanelSuperiorTableLayoutPanel.RowCount = 1
+        Me.PanelSuperiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.PanelSuperiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.PanelSuperiorTableLayoutPanel.Size = New System.Drawing.Size(939, 213)
+        Me.PanelSuperiorTableLayoutPanel.TabIndex = 1
         '
         'NuevoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(936, 481)
-        Me.Controls.Add(Me.TableLayoutPanel2)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.PanelSuperiorTableLayoutPanel)
+        Me.Controls.Add(Me.PanelInferiorTableLayoutPanel)
         Me.Name = "NuevoUsuario"
         Me.Text = "NuevoUsuario"
         Me.Panel6.ResumeLayout(False)
@@ -386,14 +386,14 @@ Partial Class NuevoUsuario
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.PanelInferiorTableLayoutPanel.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.PanelSuperiorTableLayoutPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -408,7 +408,7 @@ Partial Class NuevoUsuario
     Friend WithEvents CargarButton As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Fotolbl As Label
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents PanelInferiorTableLayoutPanel As TableLayoutPanel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents FechaDateTimePicker As DateTimePicker
     Friend WithEvents DireccionPostalTextBox As TextBox
@@ -429,5 +429,5 @@ Partial Class NuevoUsuario
     Friend WithEvents OrganizacionLabel As Label
     Friend WithEvents TelefonoLabel As Label
     Friend WithEvents NombreLabel As Label
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents PanelSuperiorTableLayoutPanel As TableLayoutPanel
 End Class

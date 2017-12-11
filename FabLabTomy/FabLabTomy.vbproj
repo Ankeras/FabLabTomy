@@ -116,10 +116,10 @@
     <Compile Include="DIseño\NuevoUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DIseño\Pricipal.Designer.vb">
-      <DependentUpon>Pricipal.vb</DependentUpon>
+    <Compile Include="DIseño\Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
     </Compile>
-    <Compile Include="DIseño\Pricipal.vb">
+    <Compile Include="DIseño\Principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DIseño\SplashV2.Designer.vb">
@@ -160,8 +160,8 @@
     <EmbeddedResource Include="DIseño\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DIseño\Pricipal.resx">
-      <DependentUpon>Pricipal.vb</DependentUpon>
+    <EmbeddedResource Include="DIseño\Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DIseño\SplashV2.resx">
       <DependentUpon>SplashV2.vb</DependentUpon>

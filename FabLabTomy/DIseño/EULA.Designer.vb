@@ -24,8 +24,8 @@ Partial Class EULA
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EULA))
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.CancelarButton = New System.Windows.Forms.Button()
+        Me.AceptarButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'RichTextBox1
@@ -36,32 +36,31 @@ Partial Class EULA
         Me.RichTextBox1.TabIndex = 0
         Me.RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
         '
-        'Button1
+        'CancelarButton
         '
-        Me.Button1.Location = New System.Drawing.Point(160, 373)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Rechazar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.CancelarButton.Location = New System.Drawing.Point(160, 373)
+        Me.CancelarButton.Name = "CancelarButton"
+        Me.CancelarButton.Size = New System.Drawing.Size(75, 23)
+        Me.CancelarButton.TabIndex = 1
+        Me.CancelarButton.Text = "Rechazar"
+        Me.CancelarButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'AceptarButton
         '
-        Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(309, 373)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Aceptar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.AceptarButton.Location = New System.Drawing.Point(325, 373)
+        Me.AceptarButton.Name = "AceptarButton"
+        Me.AceptarButton.Size = New System.Drawing.Size(75, 23)
+        Me.AceptarButton.TabIndex = 2
+        Me.AceptarButton.Text = "Aceptar"
+        Me.AceptarButton.UseVisualStyleBackColor = True
         '
         'EULA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(544, 410)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.AceptarButton)
+        Me.Controls.Add(Me.CancelarButton)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Name = "EULA"
         Me.Text = "EULA"
@@ -70,6 +69,6 @@ Partial Class EULA
     End Sub
 
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents CancelarButton As Button
+    Friend WithEvents AceptarButton As Button
 End Class

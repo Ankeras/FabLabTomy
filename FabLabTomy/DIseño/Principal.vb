@@ -1,8 +1,7 @@
-﻿Public Class Pricipal
+﻿Public Class Principal
     Private Sub Pricipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim form2 As SplashV2 = New SplashV2
-        form2.Show()
-
+        Dim form As New SplashV2
+        form.ShowDialog()
     End Sub
 
     Private Sub NuevoUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioToolStripMenuItem.Click
