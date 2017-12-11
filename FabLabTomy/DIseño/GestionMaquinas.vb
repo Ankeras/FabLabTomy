@@ -21,5 +21,11 @@
         MaquinaDataGridView.DataSource = NegocioMaquinas.ObtenerTodasMaquinas
     End Sub
 
+    Private Sub EliminarButton_Click(sender As Object, e As EventArgs) Handles EliminarButton.Click
 
+        If MessageBox.Show("Estas a punto de borrar una maquina de la base de datos", "Cudiado!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.OK Then
+            Dim id As Integer = MaquinaDataGridView.CurrentCell.RowIndex + 1
+            NegocioMaquinas.BorrarMaquinaId(id)
+        End If
+    End Sub
 End Class

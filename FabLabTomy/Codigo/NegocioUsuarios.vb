@@ -12,4 +12,8 @@
 
         Return gateway.SeleccionarId(id)
     End Function
+    Public Function BorrarUsuarioId(id As Integer) As Integer
+
+        Return gateway.Eliminar(id)
+    End Function
 End Module

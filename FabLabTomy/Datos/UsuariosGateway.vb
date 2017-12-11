@@ -93,10 +93,10 @@ Public Class UsuariosGateway
 
 
 
-    Public Function Eliminar() As Integer
+    Public Function Eliminar(id As Integer) As Integer
         Dim filas As Integer
-        ''''''''''''''''''''''''''''' HACER CONSULTA ''''''''''''''''''''''''''''''
-        Dim consulta As String = ""
+        Dim consulta As String = String.Format("DELETE FROM Usuarios WHERE id={0})", id)
+
         Try
             conexion.Open()
             comando.CommandText = consulta

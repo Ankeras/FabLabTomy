@@ -24,5 +24,7 @@
         UsuariosDataGridView.DataSource = NegocioUsuarios.ObtenerTodosUsuarios
     End Sub
 
+    Private Sub EliminarButton_Click(sender As Object, e As EventArgs) Handles EliminarButton.Click
 
+    End Sub
 End Class

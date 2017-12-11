@@ -109,6 +109,7 @@ C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.Gestio
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.GestionUsuarios.resources
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.NuevaMaquina.resources
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.NuevoUsuario.resources
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.Principal.resources
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.SplashV2.resources
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.Resources.resources
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.vbproj.GenerateResource.Cache
@@ -117,4 +118,3 @@ C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.exe
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.xml
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.pdb
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.vbprojResolveAssemblyReference.cache
-C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.Principal.resources

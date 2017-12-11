@@ -65,11 +65,12 @@ Partial Class SplashV2
         '
         Me.CargandoLabel.AutoSize = True
         Me.CargandoLabel.BackColor = System.Drawing.Color.Transparent
-        Me.CargandoLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CargandoLabel.ForeColor = System.Drawing.Color.DarkRed
         Me.CargandoLabel.Location = New System.Drawing.Point(13, 342)
         Me.CargandoLabel.Name = "CargandoLabel"
-        Me.CargandoLabel.Size = New System.Drawing.Size(0, 13)
+        Me.CargandoLabel.Size = New System.Drawing.Size(10, 13)
         Me.CargandoLabel.TabIndex = 2
+        Me.CargandoLabel.Text = " "
         '
         'SplashV2
         '
