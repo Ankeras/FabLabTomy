@@ -1,4 +1,5 @@
 ﻿Public Class Principal
+    'dd
     Private Sub Pricipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim form As New SplashV2
         form.ShowDialog()
@@ -45,5 +46,16 @@
         usuario.MdiParent = Me
         usuario.Text = "Gestión de Usuarios"
         usuario.Show()
+    End Sub
+
+    Private Sub AcercaDeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeToolStripMenuItem.Click
+        Dim form As New AcercaDe
+        form.ShowDialog()
+    End Sub
+
+    Private Sub MinimizarTodasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimizarTodasToolStripMenuItem.Click
+        For Each item In Me.MdiChildren
+            item.WindowState = FormWindowState.Minimized
+        Next
     End Sub
 End Class

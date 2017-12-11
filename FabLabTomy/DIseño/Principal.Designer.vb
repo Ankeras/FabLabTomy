@@ -152,7 +152,7 @@ Partial Class Principal
         'AcercaDeToolStripMenuItem
         '
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
         '
         'StatusStrip1
@@ -176,7 +176,7 @@ Partial Class Principal
         Me.MaquinasToolStripStatusLabel.Size = New System.Drawing.Size(59, 17)
         Me.MaquinasToolStripStatusLabel.Text = "Maquinas"
         '
-        'Pricipal
+        'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -185,7 +185,7 @@ Partial Class Principal
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Pricipal"
+        Me.Name = "Principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pricipal"
         Me.MenuStrip1.ResumeLayout(False)

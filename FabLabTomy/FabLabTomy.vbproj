@@ -86,6 +86,12 @@
     <Compile Include="Datos\TiposMaquinaGateway.vb" />
     <Compile Include="Datos\TiposUsuariosGateway.vb" />
     <Compile Include="Datos\UsuariosGateway.vb" />
+    <Compile Include="DIseño\AcercaDe.Designer.vb">
+      <DependentUpon>AcercaDe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\AcercaDe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DIseño\EULA.Designer.vb">
       <DependentUpon>EULA.vb</DependentUpon>
     </Compile>
@@ -145,6 +151,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DIseño\AcercaDe.resx">
+      <DependentUpon>AcercaDe.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DIseño\EULA.resx">
       <DependentUpon>EULA.vb</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +196,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-acercaDe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
