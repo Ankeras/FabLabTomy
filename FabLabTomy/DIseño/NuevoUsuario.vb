@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If rol = 1 Then
+        If rol = 1 Or rol = 2 Then
             Dim resultado As DataTable = NegocioUsuarios.ObtenerUsuarioId(id)
 
             For Each row As DataRow In resultado.Rows
@@ -45,9 +45,10 @@
                     EmailTextBox.Text = CStr(row("email"))
                 End If
 
-                PanelSuperiorTableLayoutPanel.Enabled = False
-                PanelInferiorTableLayoutPanel.Enabled = False
-
+                If rol = 1 Then
+                    PanelSuperiorTableLayoutPanel.Enabled = False
+                    PanelInferiorTableLayoutPanel.Enabled = False
+                End If
 
 
             Next
