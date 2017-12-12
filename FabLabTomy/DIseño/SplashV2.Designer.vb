@@ -68,9 +68,9 @@ Partial Class SplashV2
         Me.CargandoLabel.ForeColor = System.Drawing.Color.DarkRed
         Me.CargandoLabel.Location = New System.Drawing.Point(13, 342)
         Me.CargandoLabel.Name = "CargandoLabel"
-        Me.CargandoLabel.Size = New System.Drawing.Size(10, 13)
+        Me.CargandoLabel.Size = New System.Drawing.Size(31, 13)
         Me.CargandoLabel.TabIndex = 2
-        Me.CargandoLabel.Text = " "
+        Me.CargandoLabel.Text = "        "
         '
         'SplashV2
         '

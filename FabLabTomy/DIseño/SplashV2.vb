@@ -1,5 +1,7 @@
 ﻿Public Class SplashV2
     Private Sub SplashV2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargandoLabel.Parent = PictureBox1
+        CargandoLabel.BackColor = Color.Transparent
         Timer1.Start()
     End Sub
 
@@ -25,5 +27,9 @@
         Dim form As New EULA
         form.ShowDialog()
         Me.Close()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
     End Sub
 End Class
