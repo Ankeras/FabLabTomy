@@ -320,4 +320,36 @@ Public Class MaquinasGateway
 
         Return resultado
     End Function
+
+    Public Function SeleccionarPorModelo(modelo As String) As DataTable
+        'Consulta SQL
+        Dim consulta As String = "SELECT * FROM Maquinas WHERE modelo LIKE '%@modelo%'"
+
+        'Añadimos a los parámetros el modelo
+        comando.Parameters.Add("@modelo", SqlDbType.VarChar)
+        comando.Parameters("@modelo").Value = modelo
+
+        'Objeto que devolveremos
+        Dim resultado As New DataTable
+        'Lector de la consulta
+        Dim lector As SqlDataReader
+
+        'Ejecución de la consulta
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            lector = comando.ExecuteReader
+
+            'Carga del resultado
+            resultado.Load(lector)
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If conexion IsNot Nothing Then
+                conexion.Close()
+            End If
+        End Try
+
+        Return resultado
+    End Function
 End Class

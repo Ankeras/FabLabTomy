@@ -37,4 +37,10 @@
 
         Return gateway.SeleccionarMaquinaPorId(id)
     End Function
+
+    Public Function ObtenerMaquinasPorModelo(modelo As String) As DataTable
+        Dim gateway As New MaquinasGateway(My.Settings.cadena)
+
+        Return gateway.SeleccionarPorModelo(modelo)
+    End Function
 End Module
