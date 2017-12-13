@@ -18,7 +18,7 @@
         form1.ShowDialog()
     End Sub
     Private Sub GestionMaquinas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MaquinaDataGridView.DataSource = NegocioMaquinas.ObtenerTodasMaquinas
+        MaquinaDataGridView.DataSource = NegocioMaquinas.ObtenerTodasMaquinas()
     End Sub
 
     Private Sub EliminarButton_Click(sender As Object, e As EventArgs) Handles EliminarButton.Click
@@ -27,5 +27,9 @@
             Dim id As Integer = MaquinaDataGridView.CurrentCell.RowIndex + 1
             NegocioMaquinas.BorrarMaquinaId(id)
         End If
+    End Sub
+
+    Private Sub BuscarButton_Click(sender As Object, e As EventArgs) Handles BuscarButton.Click
+        MaquinaDataGridView.DataSource = ObtenerMaquinasPorModelo(BuscarTextBox.Text)
     End Sub
 End Class
