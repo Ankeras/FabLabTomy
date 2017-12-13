@@ -93,6 +93,13 @@ FabLabTomy
  </summary>
  <returns>Devuelve los datos de la tabla en un objeto DataTable</returns>
 </member>
+<member name="M:FabLabTomy.MaquinasGateway.SeleccionarMaquinaPorId(System.Int32)">
+ <summary>
+ Método para seleccionar un registro de la tabla Máquinas
+ </summary>
+ <param name="id">id de la máquina que se desea mostrar</param>
+ <returns>Devuelve los datos de la máquina seleccionada</returns>
+</member>
 <member name="T:FabLabTomy.TiposMaquinaGateway">
  <summary>
  Clase que define un gateway para la tabla TiposMaquina
