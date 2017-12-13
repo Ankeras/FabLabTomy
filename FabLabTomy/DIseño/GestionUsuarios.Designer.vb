@@ -29,7 +29,7 @@ Partial Class GestionUsuarios
         Me.ConsultarButton = New System.Windows.Forms.Button()
         Me.UsuariosDataGridView = New System.Windows.Forms.DataGridView()
         Me.SuperiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.BucarTextBox = New System.Windows.Forms.TextBox()
+        Me.BuscarTextBox = New System.Windows.Forms.TextBox()
         Me.NuevoUsuarioButton = New System.Windows.Forms.Button()
         Me.BuscarButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -120,7 +120,7 @@ Partial Class GestionUsuarios
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.56775!))
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.43225!))
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153.0!))
-        Me.SuperiorTableLayoutPanel.Controls.Add(Me.BucarTextBox, 0, 0)
+        Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarTextBox, 0, 0)
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.NuevoUsuarioButton, 2, 0)
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarButton, 1, 0)
         Me.SuperiorTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
@@ -131,13 +131,13 @@ Partial Class GestionUsuarios
         Me.SuperiorTableLayoutPanel.Size = New System.Drawing.Size(604, 70)
         Me.SuperiorTableLayoutPanel.TabIndex = 2
         '
-        'BucarTextBox
+        'BuscarTextBox
         '
-        Me.BucarTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BucarTextBox.Location = New System.Drawing.Point(3, 25)
-        Me.BucarTextBox.Name = "BucarTextBox"
-        Me.BucarTextBox.Size = New System.Drawing.Size(190, 20)
-        Me.BucarTextBox.TabIndex = 1
+        Me.BuscarTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BuscarTextBox.Location = New System.Drawing.Point(3, 25)
+        Me.BuscarTextBox.Name = "BuscarTextBox"
+        Me.BuscarTextBox.Size = New System.Drawing.Size(190, 20)
+        Me.BuscarTextBox.TabIndex = 1
         '
         'NuevoUsuarioButton
         '
@@ -186,7 +186,7 @@ Partial Class GestionUsuarios
     Friend WithEvents ConsultarButton As Button
     Friend WithEvents UsuariosDataGridView As DataGridView
     Friend WithEvents SuperiorTableLayoutPanel As TableLayoutPanel
-    Friend WithEvents BucarTextBox As TextBox
+    Friend WithEvents BuscarTextBox As TextBox
     Friend WithEvents NuevoUsuarioButton As Button
     Friend WithEvents BuscarButton As Button
 End Class

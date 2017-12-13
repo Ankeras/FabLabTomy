@@ -20,11 +20,14 @@
     End Sub
 
     Private Sub GestionUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        BucarTextBox.Focus()
-        UsuariosDataGridView.DataSource = NegocioUsuarios.ObtenerTodosUsuarios
+        BuscarTextBox.Focus()
+        UsuariosDataGridView.DataSource = NegocioUsuarios.ObtenerTodosUsuarios()
     End Sub
 
     Private Sub EliminarButton_Click(sender As Object, e As EventArgs) Handles EliminarButton.Click
 
+    End Sub
+
+    Private Sub BuscarButton_Click(sender As Object, e As EventArgs) Handles BuscarButton.Click
     End Sub
 End Class
