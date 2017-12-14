@@ -25,7 +25,14 @@
 
         If MessageBox.Show("Estas a punto de borrar una maquina de la base de datos", "Cudiado!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Dim id As Integer = MaquinaDataGridView.CurrentCell.RowIndex + 1
-            NegocioMaquinas.BorrarMaquinaId(id)
+
+            If NegocioMaquinas.BorrarMaquinaId(id) = -1 Then
+                MessageBox.Show("El registro no ha sido eliminado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                MessageBox.Show("Registro eliminado.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+
+
         End If
     End Sub
 

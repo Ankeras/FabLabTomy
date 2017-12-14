@@ -28,8 +28,14 @@
 
     Public Function BorrarMaquinaId(id As Integer) As Integer
         Dim gateway As New MaquinasGateway(My.Settings.cadena)
+        Dim respuesta As Integer
+        Try
+            respuesta = gateway.Eliminar(id)
+        Catch ex As Exception
+            respuesta = -1
+        End Try
 
-        Return gateway.Eliminar(id)
+        Return respuesta
     End Function
 
     Public Function ObtenerMaquinaPorId(id As Integer) As DataTable
