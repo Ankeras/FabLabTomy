@@ -12,7 +12,7 @@ Public Class UsuariosGateway
 
     Public Function Insertar(nombre As String, apellido As String, fecha As DateTime, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, observaciones As String) As Integer
         Dim filas As Integer
-        Dim consulta As String = String.Format("INSERT INTO Usuarios(nombre,apellido,fecha_nacimiento,telefono,email,direccion,organizacion,tipo,observaciones,fecha_alta) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9})", nombre, apellido, fecha, telefono, email, direccion, organizacion, tipo, observaciones, DateTime.Now.Hour)
+        Dim consulta As String = String.Format("INSERT INTO Usuarios(nombre,apellido,fecha_nacimiento,telefono,email,direccion,organizacion,tipo,observaciones,fecha_alta) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", nombre, apellido, fecha, telefono, email, direccion, organizacion, tipo, observaciones, DateTime.Now.Hour)
 
         If nombre = "" Or nombre Is Nothing Then
             Throw New ArgumentException("El nombre no puede estar vacío")
