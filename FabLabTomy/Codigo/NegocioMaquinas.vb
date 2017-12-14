@@ -28,8 +28,8 @@
 
     Public Function BorrarMaquinaId(id As Integer) As Integer
         Dim gateway As New MaquinasGateway(My.Settings.cadena)
-
-        Return gateway.Eliminar(id)
+        gateway.Eliminar(id)
+        Return 1
     End Function
 
     Public Function ObtenerMaquinaPorId(id As Integer) As DataTable
@@ -37,10 +37,8 @@
 
         Return gateway.SeleccionarMaquinaPorId(id)
     End Function
-
     Public Function ObtenerMaquinasPorModelo(modelo As String) As DataTable
         Dim gateway As New MaquinasGateway(My.Settings.cadena)
-
         Return gateway.SeleccionarPorModelo(modelo)
     End Function
 End Module

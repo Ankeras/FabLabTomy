@@ -181,3 +181,22 @@ C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLa
 C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\obj\Debug\FabLabTomy.SplashV2.resources
 C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\obj\Debug\FabLabTomy.Resources.resources
 C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\obj\Debug\FabLabTomy.vbproj.GenerateResource.Cache
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\bin\Debug\FabLabTomy.exe.config
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\bin\Debug\FabLabTomy.exe
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\bin\Debug\FabLabTomy.pdb
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\bin\Debug\FabLabTomy.xml
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.vbprojResolveAssemblyReference.cache
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.AcercaDe.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.EULA.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.GestionMaquinas.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.GestionUsuarios.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.NuevaMaquina.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.NuevoUsuario.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.Principal.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.SplashV2.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.Resources.resources
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.vbproj.GenerateResource.Cache
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.vbproj.CoreCompileInputs.cache
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.exe
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.xml
+C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\obj\Debug\FabLabTomy.pdb
