@@ -224,7 +224,6 @@ Public Class MaquinasGateway
         'Consulta SQL a ejecutar
         Dim consulta As String = "DELETE FROM Maquinas WHERE id=@id"
 
-
         'Compruebo que el id no es 0 o menor y lo añado a los parámetros
         If id <= 0 Then
             Throw New ArgumentException("El id no puede ser menor que 1")
