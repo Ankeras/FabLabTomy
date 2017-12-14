@@ -1,7 +1,15 @@
 ﻿Public Class Principal
 
+    Public Property NumeroUsuarios As Integer
+    Public Property NumeroMaquinas As Integer
+
     Private Sub Pricipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim form As New SplashV2
+        NumeroUsuarios = ObtenerTodosUsuarios().Rows.Count
+        NumeroMaquinas = ObtenerTodasMaquinas().Rows.Count
+
+        ValorUsuariosToolStripStatusLabel1.Text = CStr(NumeroUsuarios)
+        ValorMaquinasToolStripStatusLabel.Text = CStr(NumeroMaquinas)
         'form.ShowDialog()
     End Sub
 
@@ -61,5 +69,13 @@
 
     Private Sub Principal_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub GestionUsuariosToolStripButton_Click(sender As Object, e As EventArgs) Handles GestionUsuariosToolStripButton.Click
+        GestionUsuariosToolStripMenuItem.PerformClick()
+    End Sub
+
+    Private Sub GestionMaquinasToolStripButton_Click(sender As Object, e As EventArgs) Handles GestionMaquinasToolStripButton.Click
+        GestionMaquinasToolStripMenuItem.PerformClick()
     End Sub
 End Class

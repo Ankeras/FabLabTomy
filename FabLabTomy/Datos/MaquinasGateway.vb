@@ -324,7 +324,7 @@ Public Class MaquinasGateway
     Public Function SeleccionarPorModelo(modelo As String) As DataTable
         'Consulta SQL
         Dim consulta As String = "SELECT * FROM Maquinas WHERE modelo LIKE '%@modelo%'"
-
+        comando.CommandText = consulta
         'Añadimos a los parámetros el modelo
         comando.Parameters.Add("@modelo", SqlDbType.VarChar)
         comando.Parameters("@modelo").Value = modelo
@@ -337,7 +337,7 @@ Public Class MaquinasGateway
         'Ejecución de la consulta
         Try
             conexion.Open()
-            comando.CommandText = consulta
+
             lector = comando.ExecuteReader
 
             'Carga del resultado

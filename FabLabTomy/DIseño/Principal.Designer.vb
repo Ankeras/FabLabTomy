@@ -42,8 +42,14 @@ Partial Class Principal
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.UsuariosToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MaquinasToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.GestionUsuariosToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.GestionMaquinasToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ValorUsuariosToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ValorMaquinasToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -60,51 +66,55 @@ Partial Class Principal
         Me.SadaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUsuarioToolStripMenuItem, Me.GestionUsuariosToolStripMenuItem})
         Me.SadaToolStripMenuItem.Name = "SadaToolStripMenuItem"
         Me.SadaToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
-        Me.SadaToolStripMenuItem.Text = "Usuarios"
+        Me.SadaToolStripMenuItem.Text = "&Usuarios"
         '
         'NuevoUsuarioToolStripMenuItem
         '
+        Me.NuevoUsuarioToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.add_user
         Me.NuevoUsuarioToolStripMenuItem.Name = "NuevoUsuarioToolStripMenuItem"
         Me.NuevoUsuarioToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.NuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario"
+        Me.NuevoUsuarioToolStripMenuItem.Text = "&Nuevo Usuario"
         '
         'GestionUsuariosToolStripMenuItem
         '
+        Me.GestionUsuariosToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.man
         Me.GestionUsuariosToolStripMenuItem.Name = "GestionUsuariosToolStripMenuItem"
         Me.GestionUsuariosToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.GestionUsuariosToolStripMenuItem.Text = "Gestion Usuarios"
+        Me.GestionUsuariosToolStripMenuItem.Text = "&Gestion Usuarios"
         '
         'SdadsadToolStripMenuItem
         '
         Me.SdadsadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaMaquinaToolStripMenuItem, Me.GestionMaquinasToolStripMenuItem})
         Me.SdadsadToolStripMenuItem.Name = "SdadsadToolStripMenuItem"
         Me.SdadsadToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
-        Me.SdadsadToolStripMenuItem.Text = "Maquinas"
+        Me.SdadsadToolStripMenuItem.Text = "&Maquinas"
         '
         'NuevaMaquinaToolStripMenuItem
         '
+        Me.NuevaMaquinaToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.add_printer_button
         Me.NuevaMaquinaToolStripMenuItem.Name = "NuevaMaquinaToolStripMenuItem"
         Me.NuevaMaquinaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
-        Me.NuevaMaquinaToolStripMenuItem.Text = "Nueva Maquina"
+        Me.NuevaMaquinaToolStripMenuItem.Text = "&Nueva Maquina"
         '
         'GestionMaquinasToolStripMenuItem
         '
+        Me.GestionMaquinasToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.settings
         Me.GestionMaquinasToolStripMenuItem.Name = "GestionMaquinasToolStripMenuItem"
         Me.GestionMaquinasToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
-        Me.GestionMaquinasToolStripMenuItem.Text = "Gestion Maquinas"
+        Me.GestionMaquinasToolStripMenuItem.Text = "&Gestion Maquinas"
         '
         'AsdadToolStripMenuItem
         '
         Me.AsdadToolStripMenuItem.Name = "AsdadToolStripMenuItem"
         Me.AsdadToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
-        Me.AsdadToolStripMenuItem.Text = "Informes"
+        Me.AsdadToolStripMenuItem.Text = "&Informes"
         '
         'VentanaToolStripMenuItem
         '
         Me.VentanaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrganizarVentanasToolStripMenuItem, Me.MinimizarTodasToolStripMenuItem, Me.ToolStripSeparator1})
         Me.VentanaToolStripMenuItem.Name = "VentanaToolStripMenuItem"
         Me.VentanaToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.VentanaToolStripMenuItem.Text = "Ventana"
+        Me.VentanaToolStripMenuItem.Text = "&Ventana"
         '
         'OrganizarVentanasToolStripMenuItem
         '
@@ -147,7 +157,7 @@ Partial Class Principal
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
         Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
-        Me.AyudaToolStripMenuItem.Text = "Ayuda"
+        Me.AyudaToolStripMenuItem.Text = "&Ayuda"
         '
         'AcercaDeToolStripMenuItem
         '
@@ -157,7 +167,7 @@ Partial Class Principal
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripStatusLabel, Me.MaquinasToolStripStatusLabel})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripStatusLabel, Me.ValorUsuariosToolStripStatusLabel1, Me.MaquinasToolStripStatusLabel, Me.ValorMaquinasToolStripStatusLabel})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 396)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(900, 22)
@@ -167,20 +177,60 @@ Partial Class Principal
         'UsuariosToolStripStatusLabel
         '
         Me.UsuariosToolStripStatusLabel.Name = "UsuariosToolStripStatusLabel"
-        Me.UsuariosToolStripStatusLabel.Size = New System.Drawing.Size(52, 17)
-        Me.UsuariosToolStripStatusLabel.Text = "Usuarios"
+        Me.UsuariosToolStripStatusLabel.Size = New System.Drawing.Size(58, 17)
+        Me.UsuariosToolStripStatusLabel.Text = "Usuarios: "
         '
         'MaquinasToolStripStatusLabel
         '
         Me.MaquinasToolStripStatusLabel.Name = "MaquinasToolStripStatusLabel"
-        Me.MaquinasToolStripStatusLabel.Size = New System.Drawing.Size(59, 17)
-        Me.MaquinasToolStripStatusLabel.Text = "Maquinas"
+        Me.MaquinasToolStripStatusLabel.Size = New System.Drawing.Size(65, 17)
+        Me.MaquinasToolStripStatusLabel.Text = "Maquinas: "
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionUsuariosToolStripButton, Me.GestionMaquinasToolStripButton})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(900, 25)
+        Me.ToolStrip1.TabIndex = 4
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'GestionUsuariosToolStripButton
+        '
+        Me.GestionUsuariosToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GestionUsuariosToolStripButton.Image = Global.FabLabTomy.My.Resources.Resources.man
+        Me.GestionUsuariosToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.GestionUsuariosToolStripButton.Name = "GestionUsuariosToolStripButton"
+        Me.GestionUsuariosToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.GestionUsuariosToolStripButton.Text = "Gestión de usuarios"
+        '
+        'GestionMaquinasToolStripButton
+        '
+        Me.GestionMaquinasToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.GestionMaquinasToolStripButton.Image = Global.FabLabTomy.My.Resources.Resources.settings
+        Me.GestionMaquinasToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.GestionMaquinasToolStripButton.Name = "GestionMaquinasToolStripButton"
+        Me.GestionMaquinasToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.GestionMaquinasToolStripButton.Text = "Gestión de máquinas"
+        '
+        'ValorUsuariosToolStripStatusLabel1
+        '
+        Me.ValorUsuariosToolStripStatusLabel1.Name = "ValorUsuariosToolStripStatusLabel1"
+        Me.ValorUsuariosToolStripStatusLabel1.Size = New System.Drawing.Size(13, 17)
+        Me.ValorUsuariosToolStripStatusLabel1.Text = "0"
+        '
+        'ValorMaquinasToolStripStatusLabel
+        '
+        Me.ValorMaquinasToolStripStatusLabel.Name = "ValorMaquinasToolStripStatusLabel"
+        Me.ValorMaquinasToolStripStatusLabel.Size = New System.Drawing.Size(13, 17)
+        Me.ValorMaquinasToolStripStatusLabel.Text = "0"
         '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(900, 418)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
@@ -192,6 +242,8 @@ Partial Class Principal
         Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -217,4 +269,9 @@ Partial Class Principal
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents UsuariosToolStripStatusLabel As ToolStripStatusLabel
     Friend WithEvents MaquinasToolStripStatusLabel As ToolStripStatusLabel
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents GestionUsuariosToolStripButton As ToolStripButton
+    Friend WithEvents GestionMaquinasToolStripButton As ToolStripButton
+    Friend WithEvents ValorUsuariosToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents ValorMaquinasToolStripStatusLabel As ToolStripStatusLabel
 End Class

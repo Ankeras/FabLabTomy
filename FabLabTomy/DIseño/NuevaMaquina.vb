@@ -46,4 +46,11 @@
 
 
     End Sub
+
+    Private Sub AceptarButton_Click(sender As Object, e As EventArgs) Handles AceptarButton.Click
+        InsertarMaquina(ModeloTextBox.Text, CType(PrecioHoraTextBox.Text, Decimal), FechaCompraDateTimePicker.Value, TelefonoSATTextBox.Text, CInt(TipoMaquinaComboBox.SelectedValue), DescripcionTextBox.Text, CaracteristicasTextBox.Text)
+
+        MessageBox.Show("Usuario añadido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Me.Close()
+    End Sub
 End Class
