@@ -39,6 +39,8 @@
         Dim dialogo As New NuevoTipoMaquina
         dialogo.MdiParent = Me.MdiParent
         dialogo.Show()
+
+
     End Sub
 
     Private Sub AceptarButton_Click(sender As Object, e As EventArgs) Handles AceptarButton.Click
@@ -46,5 +48,9 @@
 
         MessageBox.Show("Usuario añadido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Me.Close()
+    End Sub
+
+    Private Sub NuevaMaquina_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        RellenarComboBox()
     End Sub
 End Class
