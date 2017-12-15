@@ -37,8 +37,8 @@
 
     Private Sub AnadirTipoButton_Click(sender As Object, e As EventArgs) Handles AnadirTipoButton.Click
         Dim dialogo As New NuevoTipoMaquina
-        dialogo.MdiParent = Me.MdiParent
-        dialogo.Show()
+        dialogo.from = Me
+        dialogo.ShowDialog()
     End Sub
 
     Private Sub AceptarButton_Click(sender As Object, e As EventArgs) Handles AceptarButton.Click
