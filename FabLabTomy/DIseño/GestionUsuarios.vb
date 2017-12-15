@@ -48,4 +48,10 @@ Public Class GestionUsuarios
         UsuariosDataGridView.DataSource = dv
         UsuariosDataGridView.Refresh()
     End Sub
+
+    Private Sub BuscarTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles BuscarTextBox.KeyPress
+        If Not (Char.IsLetter(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
 End Class
