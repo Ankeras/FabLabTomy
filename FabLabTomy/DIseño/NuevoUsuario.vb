@@ -1,4 +1,6 @@
-﻿Public Class NuevoUsuario
+﻿Imports System.Text.RegularExpressions
+
+Public Class NuevoUsuario
     Public id As Integer
     Public Enum RolAcceso As Integer
         Nuevo = 0
@@ -9,11 +11,17 @@
 
 
     Private Sub AceptarButton_Click(sender As Object, e As EventArgs) Handles AceptarButton.Click
-        NegocioUsuarios.InsertarUsuario(NombreTextBox.Text, ApellidoTextBox.Text, FechaDateTimePicker.Value, TelefonoTextBox.Text, EmailTextBox.Text, DireccionPostalTextBox.Text, OrganizacionTextBox.Text, 1, ObservacionesRichTextBox.Text)
 
-        Dim padre As Principal = CType(Me.MdiParent, Principal)
-        Dim valor As Integer = CInt(padre.ValorUsuariosToolStripStatusLabel1.Text) + 1
-        padre.ValorUsuariosToolStripStatusLabel1.Text = CStr(valor)
+        If TelefonoMaskedTextBox.Text.Length < 11 And EmailTextBox.Text = "" Then
+            MessageBox.Show("Es nesesacio introducir un telefono o email")
+        Else
+            NegocioUsuarios.InsertarUsuario(NombreTextBox.Text, ApellidoTextBox.Text, FechaDateTimePicker.Value, TelefonoMaskedTextBox.Text, EmailTextBox.Text, DireccionPostalTextBox.Text, OrganizacionTextBox.Text, 1, ObservacionesRichTextBox.Text)
+
+            Dim padre As Principal = CType(Me.MdiParent, Principal)
+            Dim valor As Integer = CInt(padre.ValorUsuariosToolStripStatusLabel1.Text) + 1
+            padre.ValorUsuariosToolStripStatusLabel1.Text = CStr(valor)
+        End If
+
 
     End Sub
 
@@ -39,9 +47,9 @@
                 End If
 
                 If row.IsNull("telefono") Then
-                    TelefonoTextBox.Text = " "
+                    TelefonoMaskedTextBox.Text = " "
                 Else
-                    TelefonoTextBox.Text = CStr(row("telefono"))
+                    TelefonoMaskedTextBox.Text = CStr(row("telefono"))
                 End If
 
                 If row.IsNull("email") Then
@@ -65,13 +73,53 @@
         Dim result As DialogResult = OpenFileDialog1.ShowDialog()
         If result = Windows.Forms.DialogResult.OK Then
             Dim path As String = OpenFileDialog1.FileName
-            PictureBox1.ImageLocation = path
-            Await GetThumbnail(path)
 
+            Dim fotoUrl As String = Await ComputerVisionAPI(path, NombreTextBox.Text, ApellidoTextBox.Text)
+            PictureBox1.ImageLocation = fotoUrl
 
         End If
 
 
 
     End Function
+
+
+
+    Private Sub TelefonoMaskedTextBox_Validating_1(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles TelefonoMaskedTextBox.Validating
+        If TelefonoMaskedTextBox.Text.Length < 11 Then
+            e.Cancel = True
+            ErrorProvider1.SetError(TelefonoMaskedTextBox, "Introduce un numero de telefono valido")
+        End If
+    End Sub
+
+    Private Sub TelefonoMaskedTextBox_Validated(sender As Object, e As EventArgs) Handles TelefonoMaskedTextBox.Validated
+        ErrorProvider1.SetError(TelefonoMaskedTextBox, "")
+    End Sub
+
+    Private Sub EmailTextBox_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles EmailTextBox.Validating
+
+        If Regex.IsMatch(EmailTextBox.Text, "^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$") = False Then
+            e.Cancel = True
+            ErrorProvider1.SetError(EmailTextBox, "Introduce un email valido")
+        End If
+
+    End Sub
+
+    Private Sub EmailTextBox_Validated(sender As Object, e As EventArgs) Handles EmailTextBox.Validated
+        ErrorProvider1.SetError(EmailTextBox, "")
+    End Sub
+
+    Private Sub CancelarButton_Click(sender As Object, e As EventArgs) Handles CancelarButton.Click
+        Me.Close()
+    End Sub
+
+
+    Friend Sub RellenarComboBox()
+        TipoUsuarioComboBox.DataSource = ObtenerTiposUsuario()
+        TipoUsuarioComboBox.DisplayMember = "tipo"
+        TipoUsuarioComboBox.ValueMember = "id"
+    End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
 End Class

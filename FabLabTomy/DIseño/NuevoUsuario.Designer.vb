@@ -22,6 +22,7 @@ Partial Class NuevoUsuario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NuevoUsuario))
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.CancelarButton = New System.Windows.Forms.Button()
@@ -41,21 +42,22 @@ Partial Class NuevoUsuario
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.TipoComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TipoUsuarioComboBox = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.EmailLabel = New System.Windows.Forms.Label()
         Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
         Me.ApellidoLabel = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.OrganizacionTextBox = New System.Windows.Forms.TextBox()
-        Me.TelefonoTextBox = New System.Windows.Forms.TextBox()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.OrganizacionLabel = New System.Windows.Forms.Label()
         Me.TelefonoLabel = New System.Windows.Forms.Label()
         Me.NombreLabel = New System.Windows.Forms.Label()
         Me.PanelSuperiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.TelefonoMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.Panel6.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -65,6 +67,7 @@ Partial Class NuevoUsuario
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.PanelSuperiorTableLayoutPanel.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel6
@@ -143,9 +146,9 @@ Partial Class NuevoUsuario
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(32, 50)
+        Me.PictureBox1.Location = New System.Drawing.Point(54, 43)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(214, 128)
+        Me.PictureBox1.Size = New System.Drawing.Size(150, 150)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -222,10 +225,10 @@ Partial Class NuevoUsuario
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.TipoComboBox1)
-        Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.EmailTextBox)
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.TipoUsuarioComboBox)
+        Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.EmailLabel)
         Me.Panel2.Controls.Add(Me.ApellidoTextBox)
         Me.Panel2.Controls.Add(Me.ApellidoLabel)
@@ -244,13 +247,13 @@ Partial Class NuevoUsuario
         Me.Button2.TabIndex = 42
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'TipoComboBox1
+        'TipoUsuarioComboBox
         '
-        Me.TipoComboBox1.FormattingEnabled = True
-        Me.TipoComboBox1.Location = New System.Drawing.Point(67, 149)
-        Me.TipoComboBox1.Name = "TipoComboBox1"
-        Me.TipoComboBox1.Size = New System.Drawing.Size(100, 21)
-        Me.TipoComboBox1.TabIndex = 41
+        Me.TipoUsuarioComboBox.FormattingEnabled = True
+        Me.TipoUsuarioComboBox.Location = New System.Drawing.Point(67, 149)
+        Me.TipoUsuarioComboBox.Name = "TipoUsuarioComboBox"
+        Me.TipoUsuarioComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.TipoUsuarioComboBox.TabIndex = 41
         '
         'Label4
         '
@@ -260,13 +263,6 @@ Partial Class NuevoUsuario
         Me.Label4.Size = New System.Drawing.Size(34, 13)
         Me.Label4.TabIndex = 40
         Me.Label4.Text = "Tipo :"
-        '
-        'EmailTextBox
-        '
-        Me.EmailTextBox.Location = New System.Drawing.Point(67, 79)
-        Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.EmailTextBox.TabIndex = 39
         '
         'EmailLabel
         '
@@ -295,8 +291,8 @@ Partial Class NuevoUsuario
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.TelefonoMaskedTextBox)
         Me.Panel1.Controls.Add(Me.OrganizacionTextBox)
-        Me.Panel1.Controls.Add(Me.TelefonoTextBox)
         Me.Panel1.Controls.Add(Me.NombreTextBox)
         Me.Panel1.Controls.Add(Me.OrganizacionLabel)
         Me.Panel1.Controls.Add(Me.TelefonoLabel)
@@ -312,13 +308,6 @@ Partial Class NuevoUsuario
         Me.OrganizacionTextBox.Name = "OrganizacionTextBox"
         Me.OrganizacionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.OrganizacionTextBox.TabIndex = 35
-        '
-        'TelefonoTextBox
-        '
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(106, 75)
-        Me.TelefonoTextBox.Name = "TelefonoTextBox"
-        Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TelefonoTextBox.TabIndex = 34
         '
         'NombreTextBox
         '
@@ -377,6 +366,25 @@ Partial Class NuevoUsuario
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'TelefonoMaskedTextBox
+        '
+        Me.TelefonoMaskedTextBox.Location = New System.Drawing.Point(106, 75)
+        Me.TelefonoMaskedTextBox.Mask = "000-00-00-00"
+        Me.TelefonoMaskedTextBox.Name = "TelefonoMaskedTextBox"
+        Me.TelefonoMaskedTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TelefonoMaskedTextBox.TabIndex = 43
+        '
+        'EmailTextBox
+        '
+        Me.EmailTextBox.Location = New System.Drawing.Point(67, 74)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.EmailTextBox.TabIndex = 43
+        '
         'NuevoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -401,6 +409,7 @@ Partial Class NuevoUsuario
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.PanelSuperiorTableLayoutPanel.ResumeLayout(False)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -423,19 +432,20 @@ Partial Class NuevoUsuario
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button2 As Button
-    Friend WithEvents TipoComboBox1 As ComboBox
+    Friend WithEvents TipoUsuarioComboBox As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents EmailTextBox As TextBox
     Friend WithEvents EmailLabel As Label
     Friend WithEvents ApellidoTextBox As TextBox
     Friend WithEvents ApellidoLabel As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents OrganizacionTextBox As TextBox
-    Friend WithEvents TelefonoTextBox As TextBox
     Friend WithEvents NombreTextBox As TextBox
     Friend WithEvents OrganizacionLabel As Label
     Friend WithEvents TelefonoLabel As Label
     Friend WithEvents NombreLabel As Label
     Friend WithEvents PanelSuperiorTableLayoutPanel As TableLayoutPanel
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents TelefonoMaskedTextBox As MaskedTextBox
+    Friend WithEvents EmailTextBox As TextBox
 End Class

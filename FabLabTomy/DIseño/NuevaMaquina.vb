@@ -106,6 +106,7 @@
                 Dim padre As Principal = CType(Me.MdiParent, Principal)
                 Dim valor As Integer = CInt(padre.ValorMaquinasToolStripStatusLabel.Text) + 1
                 padre.ValorMaquinasToolStripStatusLabel.Text = CStr(valor)
+
         End Select
 
         Me.Close()
