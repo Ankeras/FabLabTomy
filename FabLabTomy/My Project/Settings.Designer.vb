@@ -66,16 +66,22 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property ruta() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("FotosMaquina\")>  _
+        Public ReadOnly Property rutaFotosMaquina() As String
             Get
-                Return CType(Me("ruta"),String)
+                Return CType(Me("rutaFotosMaquina"),String)
             End Get
-            Set
-                Me("ruta") = value
-            End Set
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("FotosUsuario\")>  _
+        Public ReadOnly Property rutaFotosUsuario() As String
+            Get
+                Return CType(Me("rutaFotosUsuario"),String)
+            End Get
         End Property
     End Class
 End Namespace

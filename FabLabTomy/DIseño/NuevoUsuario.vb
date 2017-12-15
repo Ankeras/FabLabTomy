@@ -60,15 +60,18 @@
         End If
     End Sub
 
-    Private Sub CargarButton_Click(sender As Object, e As EventArgs) Handles CargarButton.Click
+    Private Async Function CargarButton_ClickAsync(sender As Object, e As EventArgs) As Task Handles CargarButton.Click
 
         Dim result As DialogResult = OpenFileDialog1.ShowDialog()
         If result = Windows.Forms.DialogResult.OK Then
             Dim path As String = OpenFileDialog1.FileName
             PictureBox1.ImageLocation = path
+            Await GetThumbnail(path)
+
+
         End If
 
 
 
-    End Sub
+    End Function
 End Class
