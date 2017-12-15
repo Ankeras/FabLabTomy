@@ -22,6 +22,11 @@ FabLabTomy
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:FabLabTomy.My.Resources.Resources.about">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:FabLabTomy.My.Resources.Resources.add_printer_button">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

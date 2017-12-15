@@ -22,6 +22,7 @@ Partial Class NuevoTipoMaquina
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NuevoTipoMaquina))
         Me.PreguntaLabel = New System.Windows.Forms.Label()
         Me.RespuestaTextBox = New System.Windows.Forms.TextBox()
         Me.AceptarButton = New System.Windows.Forms.Button()
@@ -71,6 +72,7 @@ Partial Class NuevoTipoMaquina
         Me.Controls.Add(Me.AceptarButton)
         Me.Controls.Add(Me.RespuestaTextBox)
         Me.Controls.Add(Me.PreguntaLabel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(300, 190)
         Me.MinimumSize = New System.Drawing.Size(300, 190)
         Me.Name = "NuevoTipoMaquina"

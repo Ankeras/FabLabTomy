@@ -222,5 +222,8 @@
   <ItemGroup>
     <None Include="Resources\add-user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
