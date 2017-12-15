@@ -50,6 +50,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo_100x100.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\Memes\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -178,6 +181,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DIseño\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DIseño\Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
@@ -224,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\about.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo_100x100.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
