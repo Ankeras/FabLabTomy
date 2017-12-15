@@ -52,26 +52,11 @@ Public Class MaquinasGateway
             ",tipo,descripcion,caracteristicas) VALUES(@modelo,@precioHora,@fechaCompra,@telefonoSAT," &
             "@tipo,@descripcion,@caracteristicas)"
 
-            'Filtramos los parámetros y en caso de nulos o vacíos lanzamos excepción si procede, si tienen valor lo asignamos
-            If modelo = "" Or modelo Is Nothing Then
-                Throw New ArgumentException("El modelo no puede estar vacío")
-            Else
-                comando.Parameters.Add("@modelo", SqlDbType.VarChar)
-                comando.Parameters("@modelo").Value = modelo
-            End If
-
             If precioHora <= 0 Then
                 Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
             Else
                 comando.Parameters.Add("@precioHora", SqlDbType.Money)
                 comando.Parameters("@precioHora").Value = precioHora
-            End If
-
-            If fechaCompra = DateTime.MinValue Then
-                Throw New ArgumentException("La fecha de compra no puede estar vacía")
-            Else
-                comando.Parameters.Add("@fechaCompra", SqlDbType.Date)
-                comando.Parameters("@fechaCompra").Value = fechaCompra
             End If
 
             comando.Parameters.Add("@telefonoSAT", SqlDbType.VarChar)
@@ -148,25 +133,12 @@ Public Class MaquinasGateway
 
 
             'Filtramos los parámetros y en caso de nulos o vacíos lanzamos excepción si procede, si tienen valor lo asignamos
-            If modelo = "" Or modelo Is Nothing Then
-                Throw New ArgumentException("El modelo no puede estar vacío")
-            Else
-                comando.Parameters.Add("@modelo", SqlDbType.VarChar)
-                comando.Parameters("@modelo").Value = modelo
-            End If
 
             If precioHora <= 0 Then
                 Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
             Else
                 comando.Parameters.Add("@precioHora", SqlDbType.Money)
                 comando.Parameters("@precioHora").Value = precioHora
-            End If
-
-            If fechaCompra = DateTime.MinValue Then
-                Throw New ArgumentException("La fecha de compra no puede estar vacía")
-            Else
-                comando.Parameters.Add("@fechaCompra", SqlDbType.Date)
-                comando.Parameters("@fechaCompra").Value = fechaCompra
             End If
 
             comando.Parameters.Add("@telefonoSAT", SqlDbType.VarChar)
@@ -363,7 +335,7 @@ Public Class MaquinasGateway
     End Function
 
     Public Function FiltrarNuevaMaquina(modelo As String, fechaCompra As DateTime) As Integer
-        Dim consulta As String = "SELECT COUNT(*) FROM Maquinas WHERE modelo = '@modelo' AND tipo = @fechaCompra"
+        Dim consulta As String = "SELECT COUNT(*) FROM Maquinas WHERE modelo = '@modelo' AND fecha_compra = @fechaCompra"
         Dim resultado As Integer = -1
 
         If fechaCompra = DateTime.MinValue Then

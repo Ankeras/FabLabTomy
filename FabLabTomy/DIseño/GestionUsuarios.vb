@@ -35,6 +35,9 @@ Public Class GestionUsuarios
             Dim id As Integer = CInt(UsuariosDataGridView.Rows(UsuariosDataGridView.SelectedCells.Item(0).RowIndex).Cells.Item("id").Value)
             BorrarUsuarioId(id)
             MessageBox.Show("Usuario eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim padre As Principal = CType(Me.MdiParent, Principal)
+            Dim valor As Integer = CInt(padre.ValorUsuariosToolStripStatusLabel1.Text) - 1
+            padre.ValorUsuariosToolStripStatusLabel1.Text = CStr(valor)
         End If
         UsuariosDataGridView.Refresh()
 

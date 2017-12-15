@@ -32,6 +32,10 @@
                 MessageBox.Show("El registro no ha sido eliminado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 MessageBox.Show("Registro eliminado.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Dim padre As Principal = CType(Me.MdiParent, Principal)
+                Dim valor As Integer = CInt(padre.ValorMaquinasToolStripStatusLabel.Text) - 1
+                padre.ValorMaquinasToolStripStatusLabel.Text = CStr(valor)
+                MaquinaDataGridView.Refresh()
             End If
         End If
     End Sub
