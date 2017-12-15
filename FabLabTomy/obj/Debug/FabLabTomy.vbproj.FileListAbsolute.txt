@@ -224,3 +224,7 @@ C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab
 C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\bin\Debug\Microsoft.ProjectOxford.Vision.dll
 C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\bin\Debug\Newtonsoft.Json.dll
 C:\Users\alumno\Source\Repos\FabLabTomy\FabLabTomy\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\Microsoft.ProjectOxford.Vision.dll
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.NuevoTipoMaquina.resources

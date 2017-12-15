@@ -57,6 +57,46 @@ FabLabTomy
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="M:FabLabTomy.NegocioMaquinas.ObtenerTodasMaquinas">
+ <summary>
+ Método para acceder al gateway de Maquinas y obtener todos los registros
+ </summary>
+ <returns>Devuelve todos los registros de la tabla Maquinas</returns>
+</member>
+<member name="M:FabLabTomy.NegocioMaquinas.InsertarMaquina(System.String,System.Decimal,System.DateTime,System.String,System.Int32,System.String,System.String)">
+ <summary>
+ Método para acceder al gateway de Maquinas para insertar un registro en la tabla
+ </summary>
+ <param name="modelo">modelo de la máquina</param>
+ <param name="precioHora">precio por hora</param>
+ <param name="fechaCompra">fecha de la compra</param>
+ <param name="telefonoSAT">teléfono de asistencia</param>
+ <param name="tipo">tipo de la máquina</param>
+ <param name="descripcion">descripción de la máquina</param>
+ <param name="caracteristicas">características técnicas</param>
+ <returns>Devuelve el número de filas afectadas</returns>
+</member>
+<member name="M:FabLabTomy.NegocioMaquinas.ActualizarMaquina(System.String,System.Decimal,System.DateTime,System.String,System.Int32,System.String,System.String,System.Int32)">
+ <summary>
+ Método que accede al gateway de Maquinas para actualizar un registro
+ </summary>
+ <param name="modelo">modelo de la máquina</param>
+ <param name="precioHora">precio por hora</param>
+ <param name="fechaCompra">fecha de la compra</param>
+ <param name="telefonoSAT">teléfono de asistencia</param>
+ <param name="tipo">tipo de la máquina</param>
+ <param name="descripcion">descripción de la máquina</param>
+ <param name="caracteristicas">características técnicas</param>
+ <param name="id">id de la máquina a actualizar</param>
+ <returns>Devuelve el número de filas afectadas</returns>
+</member>
+<member name="M:FabLabTomy.NegocioMaquinas.BorrarMaquinaId(System.Int32)">
+ <summary>
+ Función que accede al gateway de Maquinas para borrar un registro de la tabla
+ </summary>
+ <param name="id">id de la máquina a borrar</param>
+ <returns>Devuelve el número de filas afectadas, si devuelve -1 significa que no se ha podido ejecutar la consulta</returns>
+</member>
 <member name="T:FabLabTomy.MaquinasGateway">
  <summary>
  Clase que define un gateway para la tabla Maquinas
