@@ -3,19 +3,20 @@
     Private dv As New DataView(NegocioMaquinas.ObtenerTodasMaquinas())
     Private Sub ConsultarButton_Click(sender As Object, e As EventArgs) Handles ConsultarButton.Click
 
-        Dim id As Integer = MaquinaDataGridView.CurrentCell.RowIndex + 1
+        Dim id As Integer = CInt(MaquinaDataGridView.Rows(MaquinaDataGridView.SelectedCells.Item(0).RowIndex).Cells.Item("id").Value)
         form1.rol = NuevaMaquina.RolAcceso.Consultar
         form1.id = id
         form1.ShowDialog()
     End Sub
     Private Sub EditarButton_Click(sender As Object, e As EventArgs) Handles EditarButton.Click
-        Dim id As Integer = MaquinaDataGridView.CurrentCell.RowIndex + 1
+        Dim id As Integer = CInt(MaquinaDataGridView.Rows(MaquinaDataGridView.SelectedCells.Item(0).RowIndex).Cells.Item("id").Value)
         form1.rol = NuevaMaquina.RolAcceso.Editar
         form1.id = id
         form1.ShowDialog()
     End Sub
 
     Private Sub NuevaMaquinaButton_Click(sender As Object, e As EventArgs) Handles NuevaMaquinaButton.Click
+        form1.rol = 0
         form1.ShowDialog()
     End Sub
     Private Sub GestionMaquinas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
