@@ -61,8 +61,14 @@
     End Sub
 
     Private Sub CargarButton_Click(sender As Object, e As EventArgs) Handles CargarButton.Click
-        Dim fileDialog As New OpenFileDialog
-        Dim result As DialogResult = fileDialog.ShowDialog()
+
+        Dim result As DialogResult = OpenFileDialog1.ShowDialog()
+        If result = Windows.Forms.DialogResult.OK Then
+            Dim path As String = OpenFileDialog1.FileName
+            PictureBox1.ImageLocation = path
+        End If
+
+
 
     End Sub
 End Class
