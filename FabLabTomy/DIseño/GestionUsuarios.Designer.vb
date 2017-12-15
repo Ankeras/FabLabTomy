@@ -108,10 +108,13 @@ Partial Class GestionUsuarios
         '
         'UsuariosDataGridView
         '
+        Me.UsuariosDataGridView.AllowUserToAddRows = False
+        Me.UsuariosDataGridView.AllowUserToDeleteRows = False
         Me.UsuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UsuariosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UsuariosDataGridView.Location = New System.Drawing.Point(81, 79)
         Me.UsuariosDataGridView.Name = "UsuariosDataGridView"
+        Me.UsuariosDataGridView.ReadOnly = True
         Me.UsuariosDataGridView.Size = New System.Drawing.Size(604, 298)
         Me.UsuariosDataGridView.TabIndex = 2
         '
@@ -120,7 +123,7 @@ Partial Class GestionUsuarios
         Me.SuperiorTableLayoutPanel.ColumnCount = 3
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.56775!))
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.43225!))
-        Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
+        Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156.0!))
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarTextBox, 0, 0)
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.NuevoUsuarioButton, 2, 0)
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarButton, 1, 0)
@@ -143,9 +146,9 @@ Partial Class GestionUsuarios
         'NuevoUsuarioButton
         '
         Me.NuevoUsuarioButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NuevoUsuarioButton.Location = New System.Drawing.Point(451, 23)
+        Me.NuevoUsuarioButton.Location = New System.Drawing.Point(450, 23)
         Me.NuevoUsuarioButton.Name = "NuevoUsuarioButton"
-        Me.NuevoUsuarioButton.Size = New System.Drawing.Size(150, 23)
+        Me.NuevoUsuarioButton.Size = New System.Drawing.Size(151, 23)
         Me.NuevoUsuarioButton.TabIndex = 2
         Me.NuevoUsuarioButton.Text = "Nuevo Usuario"
         Me.NuevoUsuarioButton.UseVisualStyleBackColor = True
