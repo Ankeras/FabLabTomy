@@ -138,18 +138,21 @@
 
         Select Case rol
             Case RolAcceso.Editar
-                ActualizarMaquina(ModeloTextBox.Text, CType(PrecioHoraTextBox.Text, Decimal), FechaCompraDateTimePicker.Value, TelefonoSATTextBox.Text, CInt(TipoMaquinaComboBox.SelectedValue), DescripcionTextBox.Text, CaracteristicasTextBox.Text, id)
-
-                MessageBox.Show("Máquina actualizada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If ActualizarMaquina(ModeloTextBox.Text, CType(PrecioHoraTextBox.Text, Decimal), FechaCompraDateTimePicker.Value, TelefonoSATTextBox.Text, CInt(TipoMaquinaComboBox.SelectedValue), DescripcionTextBox.Text, CaracteristicasTextBox.Text, id) = -1 Then
+                    MessageBox.Show("Máquina no actualizada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    MessageBox.Show("Máquina actualizada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
             Case 0
-                InsertarMaquina(ModeloTextBox.Text, CType(PrecioHoraTextBox.Text, Decimal), FechaCompraDateTimePicker.Value, TelefonoSATTextBox.Text, CInt(TipoMaquinaComboBox.SelectedValue), DescripcionTextBox.Text, CaracteristicasTextBox.Text)
+                If InsertarMaquina(ModeloTextBox.Text, CType(PrecioHoraTextBox.Text, Decimal), FechaCompraDateTimePicker.Value, TelefonoSATTextBox.Text, CInt(TipoMaquinaComboBox.SelectedValue), DescripcionTextBox.Text, CaracteristicasTextBox.Text) = -1 Then
+                    MessageBox.Show("Máquina no añadida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    MessageBox.Show("Máquina añadida.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                MessageBox.Show("Máquina añadida.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                Dim padre As Principal = CType(Me.MdiParent, Principal)
-                Dim valor As Integer = CInt(padre.ValorMaquinasToolStripStatusLabel.Text) + 1
-                padre.ValorMaquinasToolStripStatusLabel.Text = CStr(valor)
-
+                    Dim padre As Principal = CType(Me.MdiParent, Principal)
+                    Dim valor As Integer = CInt(padre.ValorMaquinasToolStripStatusLabel.Text) + 1
+                    padre.ValorMaquinasToolStripStatusLabel.Text = CStr(valor)
+                End If
         End Select
 
         Me.Close()
@@ -189,9 +192,9 @@
         Dim resultDialog As DialogResult = OpenFileDialog1.ShowDialog()
         If resultDialog = DialogResult.OK Then
             Dim path As String = OpenFileDialog1.FileName
-            foto.ImageLocation = path
+            Dim urlFoto As String = Await MaquinaAPI(path, ModeloTextBox.Text, CStr(TipoMaquinaComboBox.SelectedValue))
+            foto.ImageLocation = urlFoto
             ImagenesFlowLayoutPanel.Controls.Add(foto)
-            'Await ComputerVisionAPI(path, "usuario")
         End If
     End Function
 End Class
