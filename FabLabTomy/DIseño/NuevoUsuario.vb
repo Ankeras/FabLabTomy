@@ -10,6 +10,11 @@
 
     Private Sub AceptarButton_Click(sender As Object, e As EventArgs) Handles AceptarButton.Click
         NegocioUsuarios.InsertarUsuario(NombreTextBox.Text, ApellidoTextBox.Text, FechaDateTimePicker.Value, TelefonoTextBox.Text, EmailTextBox.Text, DireccionPostalTextBox.Text, OrganizacionTextBox.Text, 1, ObservacionesRichTextBox.Text)
+
+        Dim padre As Principal = CType(Me.MdiParent, Principal)
+        Dim valor As Integer = CInt(padre.ValorUsuariosToolStripStatusLabel1.Text) + 1
+        padre.ValorUsuariosToolStripStatusLabel1.Text = CStr(valor)
+
     End Sub
 
     Private Sub NuevoUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load

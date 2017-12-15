@@ -46,7 +46,12 @@
     Private Sub AceptarButton_Click(sender As Object, e As EventArgs) Handles AceptarButton.Click
         InsertarMaquina(ModeloTextBox.Text, CType(PrecioHoraTextBox.Text, Decimal), FechaCompraDateTimePicker.Value, TelefonoSATTextBox.Text, CInt(TipoMaquinaComboBox.SelectedValue), DescripcionTextBox.Text, CaracteristicasTextBox.Text)
 
-        MessageBox.Show("Usuario añadido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Máquina añadida.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Dim padre As Principal = CType(Me.MdiParent, Principal)
+        Dim valor As Integer = CInt(padre.ValorMaquinasToolStripStatusLabel.Text) + 1
+        padre.ValorMaquinasToolStripStatusLabel.Text = CStr(valor)
+
         Me.Close()
     End Sub
 
