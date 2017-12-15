@@ -2,6 +2,7 @@
 
 Public Class GestionUsuarios
     Dim form1 As New NuevoUsuario
+    Dim dv As New DataView(NegocioUsuarios.ObtenerTodosUsuarios())
     Private Sub NuevoUsuarioButton_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioButton.Click
         Dim usuario As New NuevoUsuario
         usuario.MdiParent = Me.MdiParent
@@ -40,5 +41,8 @@ Public Class GestionUsuarios
     End Sub
 
     Private Sub BuscarButton_Click(sender As Object, e As EventArgs) Handles BuscarButton.Click
+        dv.RowFilter = String.Format("nombre Like '%{0}%'", BuscarTextBox.Text)
+        UsuariosDataGridView.DataSource = dv
+        UsuariosDataGridView.Refresh()
     End Sub
 End Class

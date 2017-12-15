@@ -54,4 +54,10 @@
             Next
         End If
     End Sub
+
+    Private Sub CargarButton_Click(sender As Object, e As EventArgs) Handles CargarButton.Click
+        Dim fileDialog As New OpenFileDialog
+        Dim result As DialogResult = fileDialog.ShowDialog()
+
+    End Sub
 End Class
