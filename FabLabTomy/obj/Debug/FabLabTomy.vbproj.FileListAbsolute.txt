@@ -199,3 +199,4 @@ C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab
 C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\obj\Debug\FabLabTomy.exe
 C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\obj\Debug\FabLabTomy.xml
 C:\Users\alumno\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\obj\Debug\FabLabTomy.pdb
+C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\obj\Debug\FabLabTomy.NuevoTipoMaquina.resources

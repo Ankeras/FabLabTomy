@@ -43,74 +43,78 @@ Public Class MaquinasGateway
         'Variable que devolveremos indicando el número de filas afectadas
         Dim filas As Integer
 
-        'Sentencia de inserción de SQL
-        Dim consulta As String = "INSERT INTO Maquinas(modelo,precio_hora,fecha_compra,telefono_sat" &
+        'Filtro primero que no se repita con los datos de otra máquina
+        If FiltrarNuevaMaquina(modelo, fechaCompra) <> 0 Then
+            Throw New ArgumentException("El modelo y la fecha no pueden coincidir con los de otra máquina")
+        Else
+            'Sentencia de inserción de SQL
+            Dim consulta As String = "INSERT INTO Maquinas(modelo,precio_hora,fecha_compra,telefono_sat" &
             ",tipo,descripcion,caracteristicas) VALUES(@modelo,@precioHora,@fechaCompra,@telefonoSAT," &
             "@tipo,@descripcion,@caracteristicas)"
 
-        'Filtramos los parámetros y en caso de nulos o vacíos lanzamos excepción si procede, si tienen valor lo asignamos
-        If modelo = "" Or modelo Is Nothing Then
-            Throw New ArgumentException("El modelo no puede estar vacío")
-        Else
-            comando.Parameters.Add("@modelo", SqlDbType.VarChar)
-            comando.Parameters("@modelo").Value = modelo
-        End If
-
-        If precioHora <= 0 Then
-            Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
-        Else
-            comando.Parameters.Add("@precioHora", SqlDbType.Money)
-            comando.Parameters("@precioHora").Value = precioHora
-        End If
-
-        If fechaCompra = DateTime.MinValue Then
-            Throw New ArgumentException("La fecha de compra no puede estar vacía")
-        Else
-            comando.Parameters.Add("@fechaCompra", SqlDbType.Date)
-            comando.Parameters("@fechaCompra").Value = fechaCompra
-        End If
-
-        comando.Parameters.Add("@telefonoSAT", SqlDbType.VarChar)
-        If telefonoSAT = "" Or telefonoSAT Is Nothing Then
-            comando.Parameters("@telefonoSAT").Value = DBNull.Value
-        Else
-            comando.Parameters("@telefonoSAT").Value = telefonoSAT
-        End If
-
-        If tipo < 1 Then
-            Throw New ArgumentException("Se debe especificar un tipo")
-        Else
-            comando.Parameters.Add("@tipo", SqlDbType.Int)
-            comando.Parameters("@tipo").Value = tipo
-        End If
-
-        comando.Parameters.Add("@descripcion", SqlDbType.Text)
-        If descripcion = "" Or descripcion Is Nothing Then
-            comando.Parameters("@descripcion").Value = DBNull.Value
-        Else
-            comando.Parameters("@descripcion").Value = descripcion
-        End If
-
-        comando.Parameters.Add("@caracteristicas", SqlDbType.Text)
-        If caracteristicas = "" Or caracteristicas Is Nothing Then
-            comando.Parameters("@caracteristicas").Value = DBNull.Value
-        Else
-            comando.Parameters("@caracteristicas").Value = caracteristicas
-        End If
-
-        'Ejecución de la consulta
-        Try
-            conexion.Open()
-            comando.CommandText = consulta
-            filas = comando.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
-        Finally
-            If (conexion IsNot Nothing) Then
-                conexion.Close()
+            'Filtramos los parámetros y en caso de nulos o vacíos lanzamos excepción si procede, si tienen valor lo asignamos
+            If modelo = "" Or modelo Is Nothing Then
+                Throw New ArgumentException("El modelo no puede estar vacío")
+            Else
+                comando.Parameters.Add("@modelo", SqlDbType.VarChar)
+                comando.Parameters("@modelo").Value = modelo
             End If
-        End Try
 
+            If precioHora <= 0 Then
+                Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
+            Else
+                comando.Parameters.Add("@precioHora", SqlDbType.Money)
+                comando.Parameters("@precioHora").Value = precioHora
+            End If
+
+            If fechaCompra = DateTime.MinValue Then
+                Throw New ArgumentException("La fecha de compra no puede estar vacía")
+            Else
+                comando.Parameters.Add("@fechaCompra", SqlDbType.Date)
+                comando.Parameters("@fechaCompra").Value = fechaCompra
+            End If
+
+            comando.Parameters.Add("@telefonoSAT", SqlDbType.VarChar)
+            If telefonoSAT = "" Or telefonoSAT Is Nothing Then
+                comando.Parameters("@telefonoSAT").Value = DBNull.Value
+            Else
+                comando.Parameters("@telefonoSAT").Value = telefonoSAT
+            End If
+
+            If tipo < 1 Then
+                Throw New ArgumentException("Se debe especificar un tipo")
+            Else
+                comando.Parameters.Add("@tipo", SqlDbType.Int)
+                comando.Parameters("@tipo").Value = tipo
+            End If
+
+            comando.Parameters.Add("@descripcion", SqlDbType.Text)
+            If descripcion = "" Or descripcion Is Nothing Then
+                comando.Parameters("@descripcion").Value = DBNull.Value
+            Else
+                comando.Parameters("@descripcion").Value = descripcion
+            End If
+
+            comando.Parameters.Add("@caracteristicas", SqlDbType.Text)
+            If caracteristicas = "" Or caracteristicas Is Nothing Then
+                comando.Parameters("@caracteristicas").Value = DBNull.Value
+            Else
+                comando.Parameters("@caracteristicas").Value = caracteristicas
+            End If
+
+            'Ejecución de la consulta
+            Try
+                conexion.Open()
+                comando.CommandText = consulta
+                filas = comando.ExecuteNonQuery()
+            Catch ex As Exception
+                Throw New Exception(ex.Message, ex)
+            Finally
+                If (conexion IsNot Nothing) Then
+                    conexion.Close()
+                End If
+            End Try
+        End If
         'Devolvemos la variable
         Return filas
     End Function
@@ -133,81 +137,86 @@ Public Class MaquinasGateway
         'Variable que devolveremos indicando el número de filas afectadas
         Dim filas As Integer
 
-        'Consulta SQL a ejecutar
-        Dim consulta As String = "UPDATE Maquinas SET modelo=@modelo,precio_hora=@precioHora,fecha_compra=@fechaCompra," &
+        'Filtro que no coincida con los datos de otra máquina
+        If FiltrarNuevaMaquina(modelo, fechaCompra) <> 1 Then
+            Throw New ArgumentException("El modelo y la fecha no pueden coincidir con los de otra máquina")
+        Else
+
+            'Consulta SQL a ejecutar
+            Dim consulta As String = "UPDATE Maquinas SET modelo=@modelo,precio_hora=@precioHora,fecha_compra=@fechaCompra," &
             "telefono_sat=@telefonoSAT,tipo=@tipo,descripcion=@descripcion,caracteristicas=@caracteristicas WHERE id=@id"
 
 
-        'Filtramos los parámetros y en caso de nulos o vacíos lanzamos excepción si procede, si tienen valor lo asignamos
-        If modelo = "" Or modelo Is Nothing Then
-            Throw New ArgumentException("El modelo no puede estar vacío")
-        Else
-            comando.Parameters.Add("@modelo", SqlDbType.VarChar)
-            comando.Parameters("@modelo").Value = modelo
-        End If
-
-        If precioHora <= 0 Then
-            Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
-        Else
-            comando.Parameters.Add("@precioHora", SqlDbType.Money)
-            comando.Parameters("@precioHora").Value = precioHora
-        End If
-
-        If fechaCompra = DateTime.MinValue Then
-            Throw New ArgumentException("La fecha de compra no puede estar vacía")
-        Else
-            comando.Parameters.Add("@fechaCompra", SqlDbType.Date)
-            comando.Parameters("@fechaCompra").Value = fechaCompra
-        End If
-
-        comando.Parameters.Add("@telefonoSAT", SqlDbType.VarChar)
-        If telefonoSAT = "" Or telefonoSAT Is Nothing Then
-            comando.Parameters("@telefonoSAT").Value = DBNull.Value
-        Else
-            comando.Parameters("@telefonoSAT").Value = telefonoSAT
-        End If
-
-        If tipo < 1 Then
-            Throw New ArgumentException("Se debe especificar un tipo")
-        Else
-            comando.Parameters.Add("@tipo", SqlDbType.Int)
-            comando.Parameters("@tipo").Value = tipo
-        End If
-
-        comando.Parameters.Add("@descripcion", SqlDbType.Text)
-        If descripcion = "" Or descripcion Is Nothing Then
-            comando.Parameters("@descripcion").Value = DBNull.Value
-        Else
-            comando.Parameters("@descripcion").Value = descripcion
-        End If
-
-        comando.Parameters.Add("@caracteristicas", SqlDbType.Text)
-        If caracteristicas = "" Or caracteristicas Is Nothing Then
-            comando.Parameters("@caracteristicas").Value = DBNull.Value
-        Else
-            comando.Parameters("@caracteristicas").Value = caracteristicas
-        End If
-
-        If id <= 0 Then
-            Throw New ArgumentException("El id no puede ser menor que 1")
-        Else
-            comando.Parameters.Add("@id", SqlDbType.Int)
-            comando.Parameters("@id").Value = id
-        End If
-
-        'Ejecución de la consulta
-        Try
-            conexion.Open()
-            comando.CommandText = consulta
-            filas = comando.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
-        Finally
-            If (conexion IsNot Nothing) Then
-                conexion.Close()
+            'Filtramos los parámetros y en caso de nulos o vacíos lanzamos excepción si procede, si tienen valor lo asignamos
+            If modelo = "" Or modelo Is Nothing Then
+                Throw New ArgumentException("El modelo no puede estar vacío")
+            Else
+                comando.Parameters.Add("@modelo", SqlDbType.VarChar)
+                comando.Parameters("@modelo").Value = modelo
             End If
-        End Try
 
+            If precioHora <= 0 Then
+                Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
+            Else
+                comando.Parameters.Add("@precioHora", SqlDbType.Money)
+                comando.Parameters("@precioHora").Value = precioHora
+            End If
+
+            If fechaCompra = DateTime.MinValue Then
+                Throw New ArgumentException("La fecha de compra no puede estar vacía")
+            Else
+                comando.Parameters.Add("@fechaCompra", SqlDbType.Date)
+                comando.Parameters("@fechaCompra").Value = fechaCompra
+            End If
+
+            comando.Parameters.Add("@telefonoSAT", SqlDbType.VarChar)
+            If telefonoSAT = "" Or telefonoSAT Is Nothing Then
+                comando.Parameters("@telefonoSAT").Value = DBNull.Value
+            Else
+                comando.Parameters("@telefonoSAT").Value = telefonoSAT
+            End If
+
+            If tipo < 1 Then
+                Throw New ArgumentException("Se debe especificar un tipo")
+            Else
+                comando.Parameters.Add("@tipo", SqlDbType.Int)
+                comando.Parameters("@tipo").Value = tipo
+            End If
+
+            comando.Parameters.Add("@descripcion", SqlDbType.Text)
+            If descripcion = "" Or descripcion Is Nothing Then
+                comando.Parameters("@descripcion").Value = DBNull.Value
+            Else
+                comando.Parameters("@descripcion").Value = descripcion
+            End If
+
+            comando.Parameters.Add("@caracteristicas", SqlDbType.Text)
+            If caracteristicas = "" Or caracteristicas Is Nothing Then
+                comando.Parameters("@caracteristicas").Value = DBNull.Value
+            Else
+                comando.Parameters("@caracteristicas").Value = caracteristicas
+            End If
+
+            If id <= 0 Then
+                Throw New ArgumentException("El id no puede ser menor que 1")
+            Else
+                comando.Parameters.Add("@id", SqlDbType.Int)
+                comando.Parameters("@id").Value = id
+            End If
+
+            'Ejecución de la consulta
+            Try
+                conexion.Open()
+                comando.CommandText = consulta
+                filas = comando.ExecuteNonQuery()
+            Catch ex As Exception
+                Throw New Exception(ex.Message, ex)
+            Finally
+                If (conexion IsNot Nothing) Then
+                    conexion.Close()
+                End If
+            End Try
+        End If
         'Devolvemos la variable
         Return filas
     End Function
@@ -344,6 +353,41 @@ Public Class MaquinasGateway
             resultado.Load(lector)
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
+        Finally
+            If conexion IsNot Nothing Then
+                conexion.Close()
+            End If
+        End Try
+
+        Return resultado
+    End Function
+
+    Public Function FiltrarNuevaMaquina(modelo As String, fechaCompra As DateTime) As Integer
+        Dim consulta As String = "SELECT COUNT(*) FROM Maquinas WHERE modelo = '@modelo' AND tipo = @fechaCompra"
+        Dim resultado As Integer = -1
+
+        If fechaCompra = DateTime.MinValue Then
+            Throw New ArgumentException("La fecha de compra no puede estar vacía")
+        Else
+            comando.Parameters.Add("@fechaCompra", SqlDbType.Date)
+            comando.Parameters("@fechaCompra").Value = fechaCompra
+        End If
+
+        If modelo = "" Or modelo Is Nothing Then
+            Throw New ArgumentException("El modelo no puede estar vacío")
+        Else
+            comando.Parameters.Add("@modelo", SqlDbType.VarChar)
+            comando.Parameters("@modelo").Value = modelo
+        End If
+
+        comando.CommandText = consulta
+
+        Try
+            conexion.Open()
+            resultado = CInt(comando.ExecuteScalar)
+
+        Catch ex As Exception
+
         Finally
             If conexion IsNot Nothing Then
                 conexion.Close()

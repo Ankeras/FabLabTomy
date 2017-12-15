@@ -116,6 +116,12 @@
     <Compile Include="DIseño\NuevaMaquina.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DIseño\NuevoTipoMaquina.Designer.vb">
+      <DependentUpon>NuevoTipoMaquina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\NuevoTipoMaquina.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DIseño\NuevoUsuario.Designer.vb">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DIseño\NuevaMaquina.resx">
       <DependentUpon>NuevaMaquina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\NuevoTipoMaquina.resx">
+      <DependentUpon>NuevoTipoMaquina.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DIseño\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>

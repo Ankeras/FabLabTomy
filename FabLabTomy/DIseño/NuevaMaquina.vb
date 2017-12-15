@@ -20,7 +20,7 @@
     ''' <summary>
     ''' Método para cargar el ComboBox con los tipos de máquinas
     ''' </summary>
-    Private Sub RellenarComboBox()
+    Friend Sub RellenarComboBox()
         TipoMaquinaComboBox.DataSource = ObtenerTiposMaquina()
         TipoMaquinaComboBox.DisplayMember = "tipo"
         TipoMaquinaComboBox.ValueMember = "id"
@@ -36,15 +36,9 @@
     End Sub
 
     Private Sub AnadirTipoButton_Click(sender As Object, e As EventArgs) Handles AnadirTipoButton.Click
-        Dim respuesta As String = InputBox("Escribe el nuevo tipo")
-        'Preguntar inputBox
-        If respuesta = "" Or respuesta Is Nothing Then
-            MessageBox.Show("El tipo no puede estar vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Else
-            InsertarTipo(respuesta)
-        End If
-
-
+        Dim dialogo As New NuevoTipoMaquina
+        dialogo.MdiParent = Me.MdiParent
+        dialogo.Show()
     End Sub
 
     Private Sub AceptarButton_Click(sender As Object, e As EventArgs) Handles AceptarButton.Click
