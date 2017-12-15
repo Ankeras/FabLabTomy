@@ -54,6 +54,7 @@ Partial Class NuevoUsuario
         Me.TelefonoLabel = New System.Windows.Forms.Label()
         Me.NombreLabel = New System.Windows.Forms.Label()
         Me.PanelSuperiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Panel6.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -371,6 +372,10 @@ Partial Class NuevoUsuario
         Me.PanelSuperiorTableLayoutPanel.Size = New System.Drawing.Size(939, 213)
         Me.PanelSuperiorTableLayoutPanel.TabIndex = 1
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'NuevoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -430,4 +435,5 @@ Partial Class NuevoUsuario
     Friend WithEvents TelefonoLabel As Label
     Friend WithEvents NombreLabel As Label
     Friend WithEvents PanelSuperiorTableLayoutPanel As TableLayoutPanel
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
