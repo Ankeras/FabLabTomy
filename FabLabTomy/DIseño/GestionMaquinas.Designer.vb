@@ -135,7 +135,7 @@ Partial Class GestionMaquinas
         Me.EditarButton.Name = "EditarButton"
         Me.EditarButton.Size = New System.Drawing.Size(110, 23)
         Me.EditarButton.TabIndex = 4
-        Me.EditarButton.Text = "EditarButton"
+        Me.EditarButton.Text = "Editar"
         Me.EditarButton.UseVisualStyleBackColor = True
         '
         'EliminarButton

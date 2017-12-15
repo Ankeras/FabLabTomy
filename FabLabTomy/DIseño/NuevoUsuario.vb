@@ -71,4 +71,8 @@
 
 
     End Sub
+
+    Private Sub CancelarButton_Click(sender As Object, e As EventArgs) Handles CancelarButton.Click
+        Me.Close()
+    End Sub
 End Class
