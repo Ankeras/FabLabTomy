@@ -22,6 +22,7 @@ Partial Class NuevoUsuario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NuevoUsuario))
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.CancelarButton = New System.Windows.Forms.Button()
         Me.AceptarButton = New System.Windows.Forms.Button()
@@ -378,6 +379,7 @@ Partial Class NuevoUsuario
         Me.ClientSize = New System.Drawing.Size(936, 481)
         Me.Controls.Add(Me.PanelSuperiorTableLayoutPanel)
         Me.Controls.Add(Me.PanelInferiorTableLayoutPanel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "NuevoUsuario"
         Me.Text = "NuevoUsuario"
         Me.Panel6.ResumeLayout(False)

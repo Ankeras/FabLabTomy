@@ -22,13 +22,10 @@ Partial Class Principal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Principal))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.SadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NuevoUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestionUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SdadsadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NuevaMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestionMaquinasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AsdadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentanaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrganizarVentanasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,7 +35,6 @@ Partial Class Principal
         Me.MinimizarTodasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.UsuariosToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ValorUsuariosToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -47,6 +43,11 @@ Partial Class Principal
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.GestionUsuariosToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.GestionMaquinasToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.NuevoUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NuevaMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionMaquinasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -68,40 +69,12 @@ Partial Class Principal
         Me.SadaToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.SadaToolStripMenuItem.Text = "&Usuarios"
         '
-        'NuevoUsuarioToolStripMenuItem
-        '
-        Me.NuevoUsuarioToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.add_user
-        Me.NuevoUsuarioToolStripMenuItem.Name = "NuevoUsuarioToolStripMenuItem"
-        Me.NuevoUsuarioToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.NuevoUsuarioToolStripMenuItem.Text = "&Nuevo Usuario"
-        '
-        'GestionUsuariosToolStripMenuItem
-        '
-        Me.GestionUsuariosToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.man
-        Me.GestionUsuariosToolStripMenuItem.Name = "GestionUsuariosToolStripMenuItem"
-        Me.GestionUsuariosToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
-        Me.GestionUsuariosToolStripMenuItem.Text = "&Gestion Usuarios"
-        '
         'SdadsadToolStripMenuItem
         '
         Me.SdadsadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaMaquinaToolStripMenuItem, Me.GestionMaquinasToolStripMenuItem})
         Me.SdadsadToolStripMenuItem.Name = "SdadsadToolStripMenuItem"
         Me.SdadsadToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.SdadsadToolStripMenuItem.Text = "&Maquinas"
-        '
-        'NuevaMaquinaToolStripMenuItem
-        '
-        Me.NuevaMaquinaToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.add_printer_button
-        Me.NuevaMaquinaToolStripMenuItem.Name = "NuevaMaquinaToolStripMenuItem"
-        Me.NuevaMaquinaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
-        Me.NuevaMaquinaToolStripMenuItem.Text = "&Nueva Maquina"
-        '
-        'GestionMaquinasToolStripMenuItem
-        '
-        Me.GestionMaquinasToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.settings
-        Me.GestionMaquinasToolStripMenuItem.Name = "GestionMaquinasToolStripMenuItem"
-        Me.GestionMaquinasToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
-        Me.GestionMaquinasToolStripMenuItem.Text = "&Gestion Maquinas"
         '
         'AsdadToolStripMenuItem
         '
@@ -126,19 +99,19 @@ Partial Class Principal
         'VerticalToolStripMenuItem
         '
         Me.VerticalToolStripMenuItem.Name = "VerticalToolStripMenuItem"
-        Me.VerticalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VerticalToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.VerticalToolStripMenuItem.Text = "&Vertical"
         '
         'HorizontalToolStripMenuItem
         '
         Me.HorizontalToolStripMenuItem.Name = "HorizontalToolStripMenuItem"
-        Me.HorizontalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HorizontalToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.HorizontalToolStripMenuItem.Text = "&Horizontal"
         '
         'CascadaToolStripMenuItem
         '
         Me.CascadaToolStripMenuItem.Name = "CascadaToolStripMenuItem"
-        Me.CascadaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CascadaToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.CascadaToolStripMenuItem.Text = "&Cascada"
         '
         'MinimizarTodasToolStripMenuItem
@@ -158,12 +131,6 @@ Partial Class Principal
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
         Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.AyudaToolStripMenuItem.Text = "&Ayuda"
-        '
-        'AcercaDeToolStripMenuItem
-        '
-        Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AcercaDeToolStripMenuItem.Text = "Acerca &de"
         '
         'StatusStrip1
         '
@@ -225,6 +192,41 @@ Partial Class Principal
         Me.GestionMaquinasToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.GestionMaquinasToolStripButton.Text = "Gestión de máquinas"
         '
+        'NuevoUsuarioToolStripMenuItem
+        '
+        Me.NuevoUsuarioToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.add_user
+        Me.NuevoUsuarioToolStripMenuItem.Name = "NuevoUsuarioToolStripMenuItem"
+        Me.NuevoUsuarioToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.NuevoUsuarioToolStripMenuItem.Text = "&Nuevo Usuario"
+        '
+        'GestionUsuariosToolStripMenuItem
+        '
+        Me.GestionUsuariosToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.man
+        Me.GestionUsuariosToolStripMenuItem.Name = "GestionUsuariosToolStripMenuItem"
+        Me.GestionUsuariosToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.GestionUsuariosToolStripMenuItem.Text = "&Gestion Usuarios"
+        '
+        'NuevaMaquinaToolStripMenuItem
+        '
+        Me.NuevaMaquinaToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.add_printer_button
+        Me.NuevaMaquinaToolStripMenuItem.Name = "NuevaMaquinaToolStripMenuItem"
+        Me.NuevaMaquinaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.NuevaMaquinaToolStripMenuItem.Text = "&Nueva Maquina"
+        '
+        'GestionMaquinasToolStripMenuItem
+        '
+        Me.GestionMaquinasToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.settings
+        Me.GestionMaquinasToolStripMenuItem.Name = "GestionMaquinasToolStripMenuItem"
+        Me.GestionMaquinasToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.GestionMaquinasToolStripMenuItem.Text = "&Gestion Maquinas"
+        '
+        'AcercaDeToolStripMenuItem
+        '
+        Me.AcercaDeToolStripMenuItem.Image = Global.FabLabTomy.My.Resources.Resources.about
+        Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AcercaDeToolStripMenuItem.Text = "Acerca &de"
+        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -233,11 +235,12 @@ Partial Class Principal
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Pricipal"
+        Me.Text = "Principal"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)

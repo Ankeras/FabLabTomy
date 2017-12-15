@@ -190,4 +190,57 @@ THIS SOFTWARE AND THE ACCOMPANYING FILES ARE SOLD "AS IS" AND WITHOUT WARRANTIES
 You agree that Victor &amp; Tony may collect and use information gathered in any manner as part of the product support services provided to you, if any, related to Tomy's FabLab 1.0.0.Victor &amp; Tony may also use this information to provide notices to you which may be of use or interest to you.
  	</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAGhoAAAEAIAAgCwAAFgAAACgAAAAaAAAANAAAAAEAIAAAAAAAkAoAABILAAASCwAAAAAAAAAA
+        AAD///8A////AP///wBlYFy3ZWBc/2VgXP9lYFz/ZWBc/2VgXP9lYFz/ZWBc/2VgXP9lYFz/ZWBc/2Vg
+        XP9lYFz/ZWBc/2VgXP9lYFz/ZWBc/2VgXP9lYFz/ZWBct////wD///8A////AP///wD///8A////AGdi
+        Xv9nYl7/Z2Je/2diXv9nYl7/Z2Je/2diXv9nYl7/Z2Je/2diXv9nYl7/Z2Je/2diXv9nYl7/Z2Je/2di
+        Xv9nYl7/Z2Je/2diXv9nYl7/////AP///wD///8A////AP///wD///8AaWNgvWljYP9pY2D/aWNg/2lj
+        YP9pY2D/aWNg/2ljYP9pY2D/aWNg/2ljYP9pY2D/aWNg/2ljYP9pY2D/aWNg/2ljYP9pY2D/aWNg/2lj
+        YL3///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AG1oZL1taGT/bWhk/21oZP9taGT/bWhk/21o
+        ZP9taGS3////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8Ab2pmP29qZv9vamb/b2pm/29qZv9vamb/b2pm/29qZjP///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8Acm1p0nJtaf9ybWn/cm1p/3Jtaf9ybWnD////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wB0cGx4dHBs/3Rw
+        bP90cGz/dHBs/3RwbGn///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AHdybi13cm7/d3Ju/3dybv93cm7/d3JuHv//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8AenVxA3p1cfl6dXH/enVx/3p1cer///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8AZF9bM2RfW2ZkX1tmZF9bM////wD///8A////AP//
+        /wD///8AfXh0z314dP99eHT/fXh0wP///wD///8A////AP///wD///8AZF9bM2RfW2ZkX1tmZF9bM///
+        /wD///8AamVhKmplYdVqZWH/amVh/2plYf9qZWH/amVh1WplYSr///8A////AP///wB/enalf3p2/396
+        dv9/enaZ////AP///wD///8AamVhKmplYdVqZWH/amVh/2plYf9qZWH/amVh1WplYSpybWngc25q/3Nu
+        av9zbmr/c25q/3Nuav9zbmr/c25q4v///wD///8A////AIJ9eX6CfXn/gn15/4J9eXX///8A////AP//
+        /wBybWngc25q/3Nuav9zbmr/c25q/3Nuav9zbmr/c25q4mZhXThmYV01////AP///wD///8A////AGZh
+        XT5mYV0r////AP///wD///8AhH97YIR/e/+Ef3v/hH97Wv///wD///8A////AGZhXThmYV01////AP//
+        /wD///8A////AGZhXT5mYV0ramRhH2pkYU3///8A////AP///wBqZGECamRhXmpkYQv///8A////AP//
+        /wCGgn1FhoJ9/4aCff+Ggn1C////AP///wD///8AamRhH2pkYU3///8A////AP///wBqZGECamRhXmpk
+        YQttaGQHbWhkYW1oZAT///8A////AG1oZB5taGRN////AP///wD///8A////AIiEgCeIhID/iISA/4iE
+        gCr///8A////AP///wBtaGQHbWhkYW1oZAT///8A////AG1oZB5taGRN////AP///wBybWlUcm1pGP//
+        /wD///8Acm1pQnJtaSr///8A////AP///wD///8AioaBFYqGgf+KhoH/ioaBG////wD///8A////AP//
+        /wBybWlUcm1pGP///wD///8Acm1pQnJtaSr///8A////AHZxbTt2cW0x////AHZxbQR2cW1fdnFtB///
+        /wD///8A////AP///wCMh4MDjIeD/4yHg/+Mh4MM////AP///wD///8A////AHZxbTt2cW0x////AHZx
+        bQR2cW1fdnFtB////wD///8Ae3ZyInt2ckr///8Ae3ZyIHt2ckn///8A////AP///wD///8A////AP//
+        /wCNiYTwjYmE/////wD///8A////AP///wD///8Ae3ZyInt2ckr///8Ae3ZyIHt2ckn///8A////AP//
+        /wB/e3YIf3t2Yn97dgF/e3ZDf3t2KP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wB/e3YIf3t2Yn97dgF/e3ZDf3t2KP///wD///8A////AP///wCEf3tVhH97GoR/
+        e2CEf3sH////AP///wD///8A////AGlkYAlpZGCWaWRg52lkYOdpZGCNaWRgBv///wD///8A////AP//
+        /wCEf3tVhH97GoR/e2CEf3sH////AP///wD///8A////AIeDfzyHg39Th4N/SP///wD///8A////AP//
+        /wD///8AcGtnmXBrZ/9wa2f/cGtn/3BrZ/9wa2eK////AP///wD///8A////AIeDfzyHg39Th4N/SP//
+        /wD///8A////AP///wD///8Ai4aCJIuGgmaLhoIk////AP///wD///8A////AP///wB4dHD2eHRw/3h0
+        cGx4dHBseHRw/3h0cOr///8A////AP///wD///8Ai4aCJIuGgmaLhoIk////AP///wD///8A////AP//
+        /wCNiYQKjYmENo2JhP+NiYT/jYmE/42JhP+NiYT/jYmE/4F8ePaBfHj/gXx4bIF8eGyBfHj/gXx46o2J
+        hP+NiYT/jYmE/42JhP+NiYT/jYmE/42JhAX///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8AiIN/loiDf/+Ig3//iIN//4iDf/+Ig3+H////AP///wD///8A////AP//
+        /wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wCNiYQJjYmEk42JhOSNiYTkjYmEhI2JhAb///8A////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A4AABwOAAAcDgAAHA////wP+Af8D/gH/A/8D/wP/A/8D/wP/A/8H/wMPh8MAA4cAAAOHAADzh
+        zwA44c4AGeHGQJnh5kCR4eRAk/PkwIP/4MDDwPDAx8DxwMfA8cDAAAHA/8D/wP/A/8A=
+</value>
+  </data>
 </root>

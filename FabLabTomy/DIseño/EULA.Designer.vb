@@ -62,6 +62,7 @@ Partial Class EULA
         Me.Controls.Add(Me.AceptarButton)
         Me.Controls.Add(Me.CancelarButton)
         Me.Controls.Add(Me.RichTextBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EULA"
         Me.Text = "EULA"
         Me.ResumeLayout(False)

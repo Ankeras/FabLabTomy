@@ -22,6 +22,7 @@ Partial Class GestionUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestionUsuarios))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.BotonesInferiorTableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.EliminarButton = New System.Windows.Forms.Button()
@@ -119,7 +120,7 @@ Partial Class GestionUsuarios
         Me.SuperiorTableLayoutPanel.ColumnCount = 3
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.56775!))
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.43225!))
-        Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153.0!))
+        Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154.0!))
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarTextBox, 0, 0)
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.NuevoUsuarioButton, 2, 0)
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarButton, 1, 0)
@@ -142,9 +143,9 @@ Partial Class GestionUsuarios
         'NuevoUsuarioButton
         '
         Me.NuevoUsuarioButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NuevoUsuarioButton.Location = New System.Drawing.Point(453, 23)
+        Me.NuevoUsuarioButton.Location = New System.Drawing.Point(452, 23)
         Me.NuevoUsuarioButton.Name = "NuevoUsuarioButton"
-        Me.NuevoUsuarioButton.Size = New System.Drawing.Size(148, 23)
+        Me.NuevoUsuarioButton.Size = New System.Drawing.Size(149, 23)
         Me.NuevoUsuarioButton.TabIndex = 2
         Me.NuevoUsuarioButton.Text = "Nuevo Usuario"
         Me.NuevoUsuarioButton.UseVisualStyleBackColor = True
@@ -165,6 +166,7 @@ Partial Class GestionUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(769, 451)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(785, 490)
         Me.MinimumSize = New System.Drawing.Size(785, 490)

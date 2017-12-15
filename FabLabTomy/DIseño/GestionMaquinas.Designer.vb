@@ -22,16 +22,17 @@ Partial Class GestionMaquinas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestionMaquinas))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.BuscarTextBox = New System.Windows.Forms.TextBox()
         Me.NuevaMaquinaButton = New System.Windows.Forms.Button()
+        Me.BuscarButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.ConsultarButton = New System.Windows.Forms.Button()
         Me.EditarButton = New System.Windows.Forms.Button()
         Me.EliminarButton = New System.Windows.Forms.Button()
         Me.MaquinaDataGridView = New System.Windows.Forms.DataGridView()
-        Me.BuscarButton = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -69,7 +70,7 @@ Partial Class GestionMaquinas
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.94444!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(602, 84)
         Me.TableLayoutPanel2.TabIndex = 0
         '
@@ -90,6 +91,16 @@ Partial Class GestionMaquinas
         Me.NuevaMaquinaButton.TabIndex = 2
         Me.NuevaMaquinaButton.Text = "Nueva Maquina"
         Me.NuevaMaquinaButton.UseVisualStyleBackColor = True
+        '
+        'BuscarButton
+        '
+        Me.BuscarButton.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.BuscarButton.Location = New System.Drawing.Point(245, 30)
+        Me.BuscarButton.Name = "BuscarButton"
+        Me.BuscarButton.Size = New System.Drawing.Size(115, 23)
+        Me.BuscarButton.TabIndex = 3
+        Me.BuscarButton.Text = "Buscar por modelo"
+        Me.BuscarButton.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel3
         '
@@ -144,22 +155,13 @@ Partial Class GestionMaquinas
         Me.MaquinaDataGridView.Size = New System.Drawing.Size(574, 256)
         Me.MaquinaDataGridView.TabIndex = 2
         '
-        'BuscarButton
-        '
-        Me.BuscarButton.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.BuscarButton.Location = New System.Drawing.Point(245, 30)
-        Me.BuscarButton.Name = "BuscarButton"
-        Me.BuscarButton.Size = New System.Drawing.Size(115, 23)
-        Me.BuscarButton.TabIndex = 3
-        Me.BuscarButton.Text = "Buscar por modelo"
-        Me.BuscarButton.UseVisualStyleBackColor = True
-        '
         'GestionMaquinas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(769, 451)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "GestionMaquinas"
         Me.Text = "GestionMaquinas"
         Me.TableLayoutPanel1.ResumeLayout(False)
