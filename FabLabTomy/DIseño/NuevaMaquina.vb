@@ -110,4 +110,16 @@
 
         Me.Close()
     End Sub
+
+    Private Sub TelefonoSATTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TelefonoSATTextBox.KeyPress
+        If Not (Char.IsDigit(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub PrecioHoraTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles PrecioHoraTextBox.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) Or e.KeyChar = ","c Or e.KeyChar = "."c) Then
+            e.Handled = True
+        End If
+    End Sub
 End Class
