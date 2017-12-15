@@ -43,14 +43,14 @@ Partial Class NuevoTipoMaquina
         Me.RespuestaTextBox.Location = New System.Drawing.Point(63, 60)
         Me.RespuestaTextBox.Name = "RespuestaTextBox"
         Me.RespuestaTextBox.Size = New System.Drawing.Size(161, 20)
-        Me.RespuestaTextBox.TabIndex = 1
+        Me.RespuestaTextBox.TabIndex = 0
         '
         'AceptarButton
         '
         Me.AceptarButton.Location = New System.Drawing.Point(63, 95)
         Me.AceptarButton.Name = "AceptarButton"
         Me.AceptarButton.Size = New System.Drawing.Size(75, 23)
-        Me.AceptarButton.TabIndex = 2
+        Me.AceptarButton.TabIndex = 1
         Me.AceptarButton.Text = "Aceptar"
         Me.AceptarButton.UseVisualStyleBackColor = True
         '
@@ -59,7 +59,7 @@ Partial Class NuevoTipoMaquina
         Me.CancelarButton.Location = New System.Drawing.Point(149, 95)
         Me.CancelarButton.Name = "CancelarButton"
         Me.CancelarButton.Size = New System.Drawing.Size(75, 23)
-        Me.CancelarButton.TabIndex = 3
+        Me.CancelarButton.TabIndex = 2
         Me.CancelarButton.Text = "Cancelar"
         Me.CancelarButton.UseVisualStyleBackColor = True
         '
