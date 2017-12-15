@@ -1,14 +1,20 @@
-﻿Imports System.Data.SqlClient
-
-Public Class GestionUsuarios
-    Dim form1 As New NuevoUsuario
-    Dim dv As New DataView(NegocioUsuarios.ObtenerTodosUsuarios())
+﻿Public Class GestionUsuarios
+    ''' <summary>
+    ''' Método que maneja el click del botón Nuevo Usuario por el cual se abrirá un nuevo formulario de la clase NuevoUsuario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub NuevoUsuarioButton_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioButton.Click
         Dim usuario As New NuevoUsuario
         usuario.MdiParent = Me.MdiParent
         usuario.Show()
     End Sub
 
+    ''' <summary>
+    ''' Método que maneja el click del botón Consultar por el cual se abrirá un nuevo formulario de la clase NuevoUsuario con el rol de acceso Consultar
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub ConsultarButton_Click(sender As Object, e As EventArgs) Handles ConsultarButton.Click
         Dim form1 As New NuevoUsuario
         Dim id As Integer = CInt(UsuariosDataGridView.Rows(UsuariosDataGridView.SelectedCells.Item(0).RowIndex).Cells.Item("id").Value)
@@ -17,6 +23,11 @@ Public Class GestionUsuarios
         form1.ShowDialog()
     End Sub
 
+    ''' <summary>
+    ''' Método que maneja el click del botón Editar por el cual se abrirá un nuevo formulario de la clase NuevoUsuario con el rol de acceso Editar
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub EditarButton_Click(sender As Object, e As EventArgs) Handles EditarButton.Click
         Dim form1 As New NuevoUsuario
         Dim id As Integer = CInt(UsuariosDataGridView.Rows(UsuariosDataGridView.SelectedCells.Item(0).RowIndex).Cells.Item("id").Value)
@@ -25,11 +36,23 @@ Public Class GestionUsuarios
         form1.ShowDialog()
     End Sub
 
+    ''' <summary>
+    ''' Método que maneja la carga del formulario y asigna al DataGridView los datos obtenidos del Método ObtenerTodosUsuarios()
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub GestionUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        UsuariosDataGridView.DataSource = dv
+        Dim dataView As New DataView(NegocioUsuarios.ObtenerTodosUsuarios())
+        UsuariosDataGridView.DataSource = dataView
         BuscarTextBox.Focus()
     End Sub
 
+    ''' <summary>
+    ''' Método que maneja el click sobre el botón Eliminar y llamrá al método BorrarUsuario y le pasará el id del elemento seleccionado del DataGridView,
+    ''' después hará un Refresh() del DataGridView
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub EliminarButton_Click(sender As Object, e As EventArgs) Handles EliminarButton.Click
         If MessageBox.Show("¿Eliminar el usuario?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Dim id As Integer = CInt(UsuariosDataGridView.Rows(UsuariosDataGridView.SelectedCells.Item(0).RowIndex).Cells.Item("id").Value)
@@ -43,12 +66,23 @@ Public Class GestionUsuarios
 
     End Sub
 
+    ''' <summary>
+    ''' Método que maneja el click del botón Buscar por el cual filtrará el DataGridView por la columna nombre con lo escrito en el TextBox
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub BuscarButton_Click(sender As Object, e As EventArgs) Handles BuscarButton.Click
-        dv.RowFilter = String.Format("nombre Like '%{0}%'", BuscarTextBox.Text)
-        UsuariosDataGridView.DataSource = dv
+        Dim dataView As New DataView(NegocioUsuarios.ObtenerTodosUsuarios())
+        dataView.RowFilter = String.Format("nombre Like '%{0}%'", BuscarTextBox.Text)
+        UsuariosDataGridView.DataSource = dataView
         UsuariosDataGridView.Refresh()
     End Sub
 
+    ''' <summary>
+    ''' En el TextBox buscar solo se podrán introducir letras
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub BuscarTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles BuscarTextBox.KeyPress
         If Not (Char.IsLetter(e.KeyChar)) Then
             e.Handled = True

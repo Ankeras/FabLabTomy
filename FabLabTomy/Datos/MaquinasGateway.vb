@@ -52,6 +52,7 @@ Public Class MaquinasGateway
             ",tipo,descripcion,caracteristicas) VALUES(@modelo,@precioHora,@fechaCompra,@telefonoSAT," &
             "@tipo,@descripcion,@caracteristicas)"
 
+            'Filtro primero que los valores no sean nulos o no válidos y los añado a los parámetros
             If precioHora <= 0 Then
                 Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
             Else
@@ -133,7 +134,6 @@ Public Class MaquinasGateway
 
 
             'Filtramos los parámetros y en caso de nulos o vacíos lanzamos excepción si procede, si tienen valor lo asignamos
-
             If precioHora <= 0 Then
                 Throw New ArgumentException("El precio por hora no puede estar vacío o ser menor que 0")
             Else
@@ -302,10 +302,19 @@ Public Class MaquinasGateway
         Return resultado
     End Function
 
+    ''' <summary>
+    ''' Método que comprueba cuántos registros hay con el modelo y la fecha dadas
+    ''' </summary>
+    ''' <param name="modelo">modelo de la máquina</param>
+    ''' <param name="fechaCompra">fecha de compra de la máquina</param>
+    ''' <returns>Devuelve el número de máquinas con el mismo nombre y la misma fecha</returns>
     Public Function FiltrarNuevaMaquina(modelo As String, fechaCompra As DateTime) As Integer
+        'Consulta SQL
         Dim consulta As String = "SELECT COUNT(*) FROM Maquinas WHERE modelo = '@modelo' AND fecha_compra = @fechaCompra"
+        'Variable que devolveremos
         Dim resultado As Integer = -1
 
+        'Filtro que sean válidos los datos pasados y asigno los parámetros
         If fechaCompra = DateTime.MinValue Then
             Throw New ArgumentException("La fecha de compra no puede estar vacía")
         Else
@@ -322,18 +331,20 @@ Public Class MaquinasGateway
 
         comando.CommandText = consulta
 
+        'Ejecución de la consulta
         Try
             conexion.Open()
             resultado = CInt(comando.ExecuteScalar)
 
         Catch ex As Exception
-
+            Throw New Exception(ex.Message)
         Finally
             If conexion IsNot Nothing Then
                 conexion.Close()
             End If
         End Try
 
+        'Devuelve el número
         Return resultado
     End Function
 End Class
