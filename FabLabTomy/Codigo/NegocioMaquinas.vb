@@ -49,9 +49,16 @@
                              caracteristicas As String, id As Integer) As Integer
         'Conexión al gateway
         Dim gateway As New MaquinasGateway(My.Settings.cadena)
+        'Variable que devolveremos
+        Dim respuesta As Integer
 
-        Return gateway.Actualizar(modelo, precioHora, fechaCompra, telefonoSAT, tipo, descripcion, caracteristicas, id)
+        Try
+            respuesta = gateway.Eliminar(id)
+        Catch ex As Exception
+            respuesta = -1
+        End Try
 
+        Return respuesta
     End Function
 
     ''' <summary>
