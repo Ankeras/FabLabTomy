@@ -79,6 +79,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Codigo\APIs.vb" />
     <Compile Include="Codigo\NegocioMaquinas.vb" />
     <Compile Include="Codigo\NegocioTiposMaquina.vb" />
     <Compile Include="Codigo\NegocioUsuarios.vb" />
