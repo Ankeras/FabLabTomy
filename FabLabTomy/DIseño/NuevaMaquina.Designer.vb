@@ -112,7 +112,7 @@ Partial Class NuevaMaquina
         Me.ModeloTextBox.Location = New System.Drawing.Point(142, 24)
         Me.ModeloTextBox.Name = "ModeloTextBox"
         Me.ModeloTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.ModeloTextBox.TabIndex = 11
+        Me.ModeloTextBox.TabIndex = 0
         '
         'PrecioHoraTextBox
         '
@@ -120,7 +120,7 @@ Partial Class NuevaMaquina
         Me.PrecioHoraTextBox.Location = New System.Drawing.Point(420, 24)
         Me.PrecioHoraTextBox.Name = "PrecioHoraTextBox"
         Me.PrecioHoraTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.PrecioHoraTextBox.TabIndex = 6
+        Me.PrecioHoraTextBox.TabIndex = 1
         '
         'ModeloLabel
         '
@@ -179,7 +179,7 @@ Partial Class NuevaMaquina
         Me.FechaCompraDateTimePicker.Location = New System.Drawing.Point(749, 24)
         Me.FechaCompraDateTimePicker.Name = "FechaCompraDateTimePicker"
         Me.FechaCompraDateTimePicker.Size = New System.Drawing.Size(178, 20)
-        Me.FechaCompraDateTimePicker.TabIndex = 9
+        Me.FechaCompraDateTimePicker.TabIndex = 2
         '
         'TipoMaquinaComboBox
         '
@@ -188,7 +188,7 @@ Partial Class NuevaMaquina
         Me.TipoMaquinaComboBox.Location = New System.Drawing.Point(420, 93)
         Me.TipoMaquinaComboBox.Name = "TipoMaquinaComboBox"
         Me.TipoMaquinaComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.TipoMaquinaComboBox.TabIndex = 10
+        Me.TipoMaquinaComboBox.TabIndex = 4
         '
         'TelefonoSATTextBox
         '
@@ -196,7 +196,7 @@ Partial Class NuevaMaquina
         Me.TelefonoSATTextBox.Location = New System.Drawing.Point(142, 93)
         Me.TelefonoSATTextBox.Name = "TelefonoSATTextBox"
         Me.TelefonoSATTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.TelefonoSATTextBox.TabIndex = 12
+        Me.TelefonoSATTextBox.TabIndex = 3
         '
         'AnadirTipoButton
         '
@@ -206,7 +206,7 @@ Partial Class NuevaMaquina
         Me.AnadirTipoButton.Location = New System.Drawing.Point(559, 88)
         Me.AnadirTipoButton.Name = "AnadirTipoButton"
         Me.AnadirTipoButton.Size = New System.Drawing.Size(30, 30)
-        Me.AnadirTipoButton.TabIndex = 14
+        Me.AnadirTipoButton.TabIndex = 5
         Me.AnadirTipoButton.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel3
@@ -311,7 +311,7 @@ Partial Class NuevaMaquina
         Me.ExaminarButton.Location = New System.Drawing.Point(78, 9)
         Me.ExaminarButton.Name = "ExaminarButton"
         Me.ExaminarButton.Size = New System.Drawing.Size(75, 23)
-        Me.ExaminarButton.TabIndex = 1
+        Me.ExaminarButton.TabIndex = 0
         Me.ExaminarButton.Text = "Examinar"
         Me.ExaminarButton.UseVisualStyleBackColor = True
         '

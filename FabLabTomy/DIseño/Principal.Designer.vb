@@ -46,9 +46,9 @@ Partial Class Principal
         Me.MaquinasToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ValorMaquinasToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.NuevoUsuarioToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.GestionUsuariosToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.GestionMaquinasToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.NuevoUsuarioToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.NuevaMaquinaToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -211,6 +211,15 @@ Partial Class Principal
         Me.ToolStrip1.TabIndex = 4
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'NuevoUsuarioToolStripButton
+        '
+        Me.NuevoUsuarioToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.NuevoUsuarioToolStripButton.Image = Global.FabLabTomy.My.Resources.Resources.add_user
+        Me.NuevoUsuarioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.NuevoUsuarioToolStripButton.Name = "NuevoUsuarioToolStripButton"
+        Me.NuevoUsuarioToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.NuevoUsuarioToolStripButton.Text = "Nuevo Usuario"
+        '
         'GestionUsuariosToolStripButton
         '
         Me.GestionUsuariosToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -228,15 +237,6 @@ Partial Class Principal
         Me.GestionMaquinasToolStripButton.Name = "GestionMaquinasToolStripButton"
         Me.GestionMaquinasToolStripButton.Size = New System.Drawing.Size(23, 22)
         Me.GestionMaquinasToolStripButton.Text = "Gestión de máquinas"
-        '
-        'NuevoUsuarioToolStripButton
-        '
-        Me.NuevoUsuarioToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.NuevoUsuarioToolStripButton.Image = Global.FabLabTomy.My.Resources.Resources.add_user
-        Me.NuevoUsuarioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.NuevoUsuarioToolStripButton.Name = "NuevoUsuarioToolStripButton"
-        Me.NuevoUsuarioToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.NuevoUsuarioToolStripButton.Text = "Nuevo Usuario"
         '
         'NuevaMaquinaToolStripButton
         '

@@ -1,12 +1,9 @@
 ﻿Public Class Principal
 
-    Public Property NumeroUsuarios As Integer
-    Public Property NumeroMaquinas As Integer
-
     Private Sub Pricipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim form As New SplashV2
-        NumeroUsuarios = ObtenerTodosUsuarios().Rows.Count
-        NumeroMaquinas = ObtenerTodasMaquinas().Rows.Count
+        Dim numeroUsuarios = ObtenerTodosUsuarios().Rows.Count
+        Dim numeroMaquinas = ObtenerTodasMaquinas().Rows.Count
 
         ValorUsuariosToolStripStatusLabel1.Text = CStr(NumeroUsuarios)
         ValorMaquinasToolStripStatusLabel.Text = CStr(NumeroMaquinas)
@@ -77,5 +74,13 @@
 
     Private Sub GestionMaquinasToolStripButton_Click(sender As Object, e As EventArgs) Handles GestionMaquinasToolStripButton.Click
         GestionMaquinasToolStripMenuItem.PerformClick()
+    End Sub
+
+    Private Sub NuevoUsuarioToolStripButton_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioToolStripButton.Click
+        NuevoUsuarioToolStripMenuItem.PerformClick()
+    End Sub
+
+    Private Sub NuevaMaquinaToolStripButton_Click(sender As Object, e As EventArgs) Handles NuevaMaquinaToolStripButton.Click
+        NuevaMaquinaToolStripMenuItem.PerformClick()
     End Sub
 End Class

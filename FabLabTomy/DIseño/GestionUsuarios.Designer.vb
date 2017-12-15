@@ -74,7 +74,7 @@ Partial Class GestionUsuarios
         Me.BotonesInferiorTableLayoutPanel.RowCount = 1
         Me.BotonesInferiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.BotonesInferiorTableLayoutPanel.Size = New System.Drawing.Size(604, 65)
-        Me.BotonesInferiorTableLayoutPanel.TabIndex = 0
+        Me.BotonesInferiorTableLayoutPanel.TabIndex = 1
         '
         'EliminarButton
         '
@@ -82,7 +82,7 @@ Partial Class GestionUsuarios
         Me.EliminarButton.Location = New System.Drawing.Point(456, 21)
         Me.EliminarButton.Name = "EliminarButton"
         Me.EliminarButton.Size = New System.Drawing.Size(145, 23)
-        Me.EliminarButton.TabIndex = 3
+        Me.EliminarButton.TabIndex = 2
         Me.EliminarButton.Text = "Eliminar"
         Me.EliminarButton.UseVisualStyleBackColor = True
         '
@@ -92,7 +92,7 @@ Partial Class GestionUsuarios
         Me.EditarButton.Location = New System.Drawing.Point(305, 21)
         Me.EditarButton.Name = "EditarButton"
         Me.EditarButton.Size = New System.Drawing.Size(145, 23)
-        Me.EditarButton.TabIndex = 4
+        Me.EditarButton.TabIndex = 1
         Me.EditarButton.Text = "Editar"
         Me.EditarButton.UseVisualStyleBackColor = True
         '
@@ -102,7 +102,7 @@ Partial Class GestionUsuarios
         Me.ConsultarButton.Location = New System.Drawing.Point(154, 21)
         Me.ConsultarButton.Name = "ConsultarButton"
         Me.ConsultarButton.Size = New System.Drawing.Size(145, 23)
-        Me.ConsultarButton.TabIndex = 5
+        Me.ConsultarButton.TabIndex = 0
         Me.ConsultarButton.Text = "Consultar"
         Me.ConsultarButton.UseVisualStyleBackColor = True
         '
@@ -113,14 +113,14 @@ Partial Class GestionUsuarios
         Me.UsuariosDataGridView.Location = New System.Drawing.Point(81, 79)
         Me.UsuariosDataGridView.Name = "UsuariosDataGridView"
         Me.UsuariosDataGridView.Size = New System.Drawing.Size(604, 298)
-        Me.UsuariosDataGridView.TabIndex = 1
+        Me.UsuariosDataGridView.TabIndex = 2
         '
         'SuperiorTableLayoutPanel
         '
         Me.SuperiorTableLayoutPanel.ColumnCount = 3
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.56775!))
         Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.43225!))
-        Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154.0!))
+        Me.SuperiorTableLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155.0!))
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarTextBox, 0, 0)
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.NuevoUsuarioButton, 2, 0)
         Me.SuperiorTableLayoutPanel.Controls.Add(Me.BuscarButton, 1, 0)
@@ -130,22 +130,22 @@ Partial Class GestionUsuarios
         Me.SuperiorTableLayoutPanel.RowCount = 1
         Me.SuperiorTableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
         Me.SuperiorTableLayoutPanel.Size = New System.Drawing.Size(604, 70)
-        Me.SuperiorTableLayoutPanel.TabIndex = 2
+        Me.SuperiorTableLayoutPanel.TabIndex = 0
         '
         'BuscarTextBox
         '
         Me.BuscarTextBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BuscarTextBox.Location = New System.Drawing.Point(3, 25)
         Me.BuscarTextBox.Name = "BuscarTextBox"
-        Me.BuscarTextBox.Size = New System.Drawing.Size(190, 20)
-        Me.BuscarTextBox.TabIndex = 1
+        Me.BuscarTextBox.Size = New System.Drawing.Size(189, 20)
+        Me.BuscarTextBox.TabIndex = 0
         '
         'NuevoUsuarioButton
         '
         Me.NuevoUsuarioButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NuevoUsuarioButton.Location = New System.Drawing.Point(452, 23)
+        Me.NuevoUsuarioButton.Location = New System.Drawing.Point(451, 23)
         Me.NuevoUsuarioButton.Name = "NuevoUsuarioButton"
-        Me.NuevoUsuarioButton.Size = New System.Drawing.Size(149, 23)
+        Me.NuevoUsuarioButton.Size = New System.Drawing.Size(150, 23)
         Me.NuevoUsuarioButton.TabIndex = 2
         Me.NuevoUsuarioButton.Text = "Nuevo Usuario"
         Me.NuevoUsuarioButton.UseVisualStyleBackColor = True
@@ -153,10 +153,10 @@ Partial Class GestionUsuarios
         'BuscarButton
         '
         Me.BuscarButton.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.BuscarButton.Location = New System.Drawing.Point(199, 23)
+        Me.BuscarButton.Location = New System.Drawing.Point(198, 23)
         Me.BuscarButton.Name = "BuscarButton"
         Me.BuscarButton.Size = New System.Drawing.Size(148, 23)
-        Me.BuscarButton.TabIndex = 3
+        Me.BuscarButton.TabIndex = 1
         Me.BuscarButton.Text = "Buscar por nombre"
         Me.BuscarButton.UseVisualStyleBackColor = True
         '
