@@ -66,9 +66,7 @@
         If result = Windows.Forms.DialogResult.OK Then
             Dim path As String = OpenFileDialog1.FileName
             PictureBox1.ImageLocation = path
-            Await GetThumbnail(path)
-
-
+            Await ComputerVisionAPI(path, "usuario")
         End If
 
 

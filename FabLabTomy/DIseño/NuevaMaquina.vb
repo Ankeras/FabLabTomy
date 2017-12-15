@@ -175,4 +175,22 @@
             e.Handled = True
         End If
     End Sub
+
+    ''' <summary>
+    ''' Método para cargar dinámicamente las fotos en el panel
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <returns></returns>
+    Private Async Function ExaminarButton_ClickAsync(sender As Object, e As EventArgs) As Task Handles ExaminarButton.Click
+        Dim foto As New PictureBox()
+
+        Dim resultDialog As DialogResult = OpenFileDialog1.ShowDialog()
+        If resultDialog = DialogResult.OK Then
+            Dim path As String = OpenFileDialog1.FileName
+            foto.ImageLocation = path
+            ImagenesFlowLayoutPanel.Controls.Add(foto)
+            Await ComputerVisionAPI(path, "usuario")
+        End If
+    End Function
 End Class
