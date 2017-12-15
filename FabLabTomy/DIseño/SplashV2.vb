@@ -19,8 +19,8 @@
                 Timer1.Stop()
                 MostrarEULA()
         End Select
-        contador = contador + 1
 
+        contador = contador + 1
     End Sub
 
     Public Sub MostrarEULA()

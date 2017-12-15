@@ -117,6 +117,12 @@
     <Compile Include="DIseño\NuevaMaquina.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DIseño\NuevoTipoMaquina.Designer.vb">
+      <DependentUpon>NuevoTipoMaquina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\NuevoTipoMaquina.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DIseño\NuevoUsuario.Designer.vb">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </Compile>
@@ -167,6 +173,9 @@
     <EmbeddedResource Include="DIseño\NuevaMaquina.resx">
       <DependentUpon>NuevaMaquina.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\NuevoTipoMaquina.resx">
+      <DependentUpon>NuevoTipoMaquina.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DIseño\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +209,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\img-acercaDe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-printer-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
