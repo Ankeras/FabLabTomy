@@ -58,7 +58,7 @@ Public Class TiposUsuariosGateway
 
     Public Function SeleccionarTodosLosTipos() As DataTable
         'Consulta SQL
-        Dim consulta As String = "SELECT * FROM TiposUsuarios"
+        Dim consulta As String = "SELECT * FROM TiposUsuario"
         'Objeto que devolveremos
         Dim resultado As New DataTable
         'Lector de la consulta

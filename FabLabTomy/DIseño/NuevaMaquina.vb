@@ -191,7 +191,7 @@
             Dim path As String = OpenFileDialog1.FileName
             foto.ImageLocation = path
             ImagenesFlowLayoutPanel.Controls.Add(foto)
-            Await ComputerVisionAPI(path, "usuario")
+            'Await ComputerVisionAPI(path, "usuario")
         End If
     End Function
 End Class

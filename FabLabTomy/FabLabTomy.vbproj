@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Codigo\APIs.vb" />
     <Compile Include="Codigo\NegocioMaquinas.vb" />
+    <Compile Include="Codigo\NegocioReservas.vb" />
     <Compile Include="Codigo\NegocioTiposMaquina.vb" />
     <Compile Include="Codigo\NegocioTipoUsuario.vb" />
     <Compile Include="Codigo\NegocioUsuarios.vb" />
@@ -131,6 +132,12 @@
       <DependentUpon>NuevoTipoMaquina.vb</DependentUpon>
     </Compile>
     <Compile Include="DIseño\NuevoTipoMaquina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIseño\NuevoTipoUsuario.Designer.vb">
+      <DependentUpon>NuevoTipoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DIseño\NuevoTipoUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DIseño\NuevoUsuario.Designer.vb">
@@ -186,6 +193,9 @@
     <EmbeddedResource Include="DIseño\NuevoTipoMaquina.resx">
       <DependentUpon>NuevoTipoMaquina.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DIseño\NuevoTipoUsuario.resx">
+      <DependentUpon>NuevoTipoUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DIseño\NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -239,6 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo_100x100.ico" />
+    <Content Include="Resources\32.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FotosMaquina\" />

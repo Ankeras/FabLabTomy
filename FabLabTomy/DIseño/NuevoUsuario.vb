@@ -66,6 +66,7 @@ Public Class NuevoUsuario
 
             Next
         End If
+        RellenarComboBox()
     End Sub
 
     Private Async Function CargarButton_ClickAsync(sender As Object, e As EventArgs) As Task Handles CargarButton.Click
