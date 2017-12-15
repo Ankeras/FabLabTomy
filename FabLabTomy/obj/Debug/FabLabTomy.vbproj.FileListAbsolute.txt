@@ -228,3 +228,6 @@ C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\Microsoft.Project
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Code C#\Source\Repos\FabLabTomy2\FabLabTomy\obj\Debug\FabLabTomy.NuevoTipoMaquina.resources
+C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\bin\Debug\Microsoft.ProjectOxford.Vision.dll
+C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Antonio\OneDrive - iesdoctorbalmis.com\2DAM\DINT - JAVIER\ProyectoFabLab\FabLabTomy\bin\Debug\Newtonsoft.Json.xml

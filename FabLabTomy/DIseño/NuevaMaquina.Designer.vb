@@ -49,6 +49,7 @@ Partial Class NuevaMaquina
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.AceptarButton = New System.Windows.Forms.Button()
         Me.CancelarButton = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
@@ -360,6 +361,10 @@ Partial Class NuevaMaquina
         Me.CancelarButton.Text = "Cancelar"
         Me.CancelarButton.UseVisualStyleBackColor = True
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'NuevaMaquina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -408,4 +413,5 @@ Partial Class NuevaMaquina
     Friend WithEvents AceptarButton As Button
     Friend WithEvents CancelarButton As Button
     Friend WithEvents AnadirTipoButton As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

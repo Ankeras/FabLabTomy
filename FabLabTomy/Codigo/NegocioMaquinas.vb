@@ -63,7 +63,10 @@
 
         'Conexión al gateway
         Dim gateway As New MaquinasGateway(My.Settings.cadena)
+
+        'Variable que devolveremos
         Dim respuesta As Integer
+
         Try
             respuesta = gateway.Eliminar(id)
         Catch ex As Exception
@@ -73,7 +76,13 @@
         Return respuesta
     End Function
 
+    ''' <summary>
+    ''' Método para obtener un registro de la tabla Maquinas por su id
+    ''' </summary>
+    ''' <param name="id">id de la máquina</param>
+    ''' <returns>Devuelve el registro obtenido</returns>
     Public Function ObtenerMaquinaPorId(id As Integer) As DataTable
+        'Conexión al gateway
         Dim gateway As New MaquinasGateway(My.Settings.cadena)
 
         Return gateway.SeleccionarMaquinaPorId(id)

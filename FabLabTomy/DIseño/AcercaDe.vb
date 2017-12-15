@@ -1,5 +1,9 @@
 ﻿Public NotInheritable Class AcercaDe
-
+    ''' <summary>
+    ''' Al cargar el formulario se se asignan los textos del título y los label correspondientes
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub AboutBox1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Set the title of the form.
         Dim ApplicationTitle As String
@@ -19,11 +23,12 @@
 
     End Sub
 
+    ''' <summary>
+    ''' Al pulsar el botón se cerrará el formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
         Me.Close()
-    End Sub
-
-    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
-
     End Sub
 End Class

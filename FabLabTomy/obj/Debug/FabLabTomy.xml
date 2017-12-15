@@ -97,6 +97,26 @@ FabLabTomy
  <param name="id">id de la máquina a borrar</param>
  <returns>Devuelve el número de filas afectadas, si devuelve -1 significa que no se ha podido ejecutar la consulta</returns>
 </member>
+<member name="M:FabLabTomy.NegocioMaquinas.ObtenerMaquinaPorId(System.Int32)">
+ <summary>
+ Método para obtener un registro de la tabla Maquinas por su id
+ </summary>
+ <param name="id">id de la máquina</param>
+ <returns>Devuelve el registro obtenido</returns>
+</member>
+<member name="M:FabLabTomy.NegocioTiposMaquina.ObtenerTiposMaquina">
+ <summary>
+ Método para acceder al gateway de TiposMaquina y obtener todos los registros
+ </summary>
+ <returns>Devuelve una tabla con todos los registros</returns>
+</member>
+<member name="M:FabLabTomy.NegocioTiposMaquina.InsertarTipo(System.String)">
+ <summary>
+ Método para acceder al gateway de TiposMaquina e insertar un nuevo tipo
+ </summary>
+ <param name="nuevoTipo">tipo que queremos insertar</param>
+ <returns>Devuelve el número de filas afectadas</returns>
+</member>
 <member name="T:FabLabTomy.MaquinasGateway">
  <summary>
  Clase que define un gateway para la tabla Maquinas
@@ -165,6 +185,14 @@ FabLabTomy
  <param name="id">id de la máquina que se desea mostrar</param>
  <returns>Devuelve los datos de la máquina seleccionada</returns>
 </member>
+<member name="M:FabLabTomy.MaquinasGateway.FiltrarNuevaMaquina(System.String,System.DateTime)">
+ <summary>
+ Método que comprueba cuántos registros hay con el modelo y la fecha dadas
+ </summary>
+ <param name="modelo">modelo de la máquina</param>
+ <param name="fechaCompra">fecha de compra de la máquina</param>
+ <returns>Devuelve el número de máquinas con el mismo nombre y la misma fecha</returns>
+</member>
 <member name="T:FabLabTomy.TiposMaquinaGateway">
  <summary>
  Clase que define un gateway para la tabla TiposMaquina
@@ -215,6 +243,93 @@ FabLabTomy
  <param name="comentario"></param>
  <returns></returns>
 </member>
+<member name="M:FabLabTomy.AcercaDe.AboutBox1_Load(System.Object,System.EventArgs)">
+ <summary>
+ Al cargar el formulario se se asignan los textos del título y los label correspondientes
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.AcercaDe.OKButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Al pulsar el botón se cerrará el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.GestionUsuarios.NuevoUsuarioButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click del botón Nuevo Usuario por el cual se abrirá un nuevo formulario de la clase NuevoUsuario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.GestionUsuarios.ConsultarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click del botón Consultar por el cual se abrirá un nuevo formulario de la clase NuevoUsuario con el rol de acceso Consultar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.GestionUsuarios.EditarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click del botón Editar por el cual se abrirá un nuevo formulario de la clase NuevoUsuario con el rol de acceso Editar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.GestionUsuarios.GestionUsuarios_Load(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja la carga del formulario y asigna al DataGridView los datos obtenidos del Método ObtenerTodosUsuarios()
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.GestionUsuarios.EliminarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click sobre el botón Eliminar y llamrá al método BorrarUsuario y le pasará el id del elemento seleccionado del DataGridView,
+ después hará un Refresh() del DataGridView
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.GestionUsuarios.BuscarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click del botón Buscar por el cual filtrará el DataGridView por la columna nombre con lo escrito en el TextBox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.GestionUsuarios.BuscarTextBox_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ En el TextBox buscar solo se podrán introducir letras
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.NuevaMaquina_Load(System.Object,System.EventArgs)">
+ <summary>
+ Al cargar el formulario filtramos con qué rol se accede, con Consultar se llamará al método AccionesConsultar(), con Editar
+ se llamará al método AccionesEditar y en otro caso se llamará al método AccionesNuevoUsuario()
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.AccionesConsultar">
+ <summary>
+ Método con el cual se deshabilitarán los TextBox y algunos botones, también se mostrarán los datos de la máquina que queremos consultar
+ </summary>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.AccionesEditar">
+ <summary>
+ Método con el cual se habilitan los TextBox y los botones y carga los datos de la máquina que queremos editar
+ </summary>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.AccionesNuevoUsuario">
+ <summary>
+ Método que habilita los TextBox y los botones y limpia el texto de los controles
+ </summary>
+</member>
 <member name="M:FabLabTomy.NuevaMaquina.RellenarComboBox">
  <summary>
  Método para cargar el ComboBox con los tipos de máquinas
@@ -223,6 +338,144 @@ FabLabTomy
 <member name="M:FabLabTomy.NuevaMaquina.CancelarButton_Click(System.Object,System.EventArgs)">
  <summary>
  Al pulsar el botón Cancelar se cerrará el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.AnadirTipoButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click de AñadirTipoMáquina y abre un formulario de la clase NuevoTipoMaquina
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.AceptarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click del botón Aceptar, en el caso del rol Editar llamará al método ActualizarMaquina de NegocioMaquinas, en el rol
+ Consultar el botón estará deshabilitado y en el rol 0 que será el de nuevo usuario llamará al método InsertarMaquina de NegocioMaquinas
+ y cambiará el label del StatusLabel del form principal, en cualquier rol después de su acción se cerrará el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.TelefonoSATTextBox_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ En el TextBox de telefonoSAT solo se podrán escribir dígitos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.NuevaMaquina.PrecioHoraTextBox_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ En el TextBox de PrecioHora solo se podrán escribir dígitos y ',' o '.'
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.NuevoTipoMaquina.AceptarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click en el botón aceptar el cual llamará al método InsertarTipo de la clase NegocioTiposMaquina,
+ después de insertar el tipo se refrescará el ComboBox del formumlario que tenemos guardado en la variable from
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.NuevoTipoMaquina.CancelarButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Al pulsar el botón Cancelar se cerrará el formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.Pricipal_Load(System.Object,System.EventArgs)">
+ <summary>
+ Al cargar el formulario aparecerá el Splash y se llamará a los métodos correspondientes para ver cuántos usuarios y
+ máquinas hay en la base de datos y reflejarlo en el StatusLabel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.NuevoUsuarioToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click en la opción del menú de nuevo usuario y abre un nuevo form de la clase NuevoUsuario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.LayoutToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click en los item de la opción del menú de ventanas, la opción vertical organizará los formularios de forma vertical,
+ la horizontal en horizontal y la opción cascada en cascada
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.NuevaMaquinaToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click en la opción del menú nueva máquina, abrirá un nuevo formulario de la clase NuevaMaquina
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.GestionMaquinasToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click en la opción del menú gestión máquinas, abrirá un nuevo formulario de la clase GestionMaquinas
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.GestionUsuariosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click en la opción del menú gestión usuarios, abrirá un nuevo formulario de la clase GestionUsuarios
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.AcercaDeToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click del botón Acerca De en la opción del menú Ayuda, abrirá un diálogo de la clase AcercaDe
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.MinimizarTodasToolStripMenuItem_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click en el botón minimizar todas del item ventanas del menú, minimizará todos los formularios hijos
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.Principal_Shown(System.Object,System.EventArgs)">
+ <summary>
+ Al mostrarse el formulario se mostrará en estado maximizado
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.GestionUsuariosToolStripButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click sobre el botón gestión usuarios del ToolBar y ejecutará click sobre el botón gestión usuarios del menú
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.GestionMaquinasToolStripButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click sobre el botón gestión máquinas del ToolBar y ejecutará click sobre el botón gestión máquinas del menú
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.NuevoUsuarioToolStripButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click sobre el botón nuevo usuario del ToolBar y ejecutará click sobre el botón nuevo usuario del menú
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:FabLabTomy.Principal.NuevaMaquinaToolStripButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que maneja el click sobre el botón nueva máquina del ToolBar y ejecutará click sobre el botón nueva máquina del menú
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
